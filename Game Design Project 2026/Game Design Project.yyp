@@ -11,6 +11,7 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Paths","folderPath":"folders/Paths.yy","name":"Paths","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -24,7 +25,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.2.213",
   },
   "name":"Game Design Project",
   "resources":[
@@ -35,19 +36,23 @@
     {"id":{"name":"obj_test_block","path":"objects/obj_test_block/obj_test_block.yy",},},
     {"id":{"name":"obj_test_player","path":"objects/obj_test_player/obj_test_player.yy",},},
     {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
-    {"id":{"name":"b1704ef6_c2af_4dce_9128_b0af61fe91bf","path":"sprites/b1704ef6_c2af_4dce_9128_b0af61fe91bf/b1704ef6_c2af_4dce_9128_b0af61fe91bf.yy",},},
+    {"id":{"name":"TileSetTester","path":"rooms/TileSetTester/TileSetTester.yy",},},
     {"id":{"name":"crate","path":"sprites/crate/crate.yy",},},
     {"id":{"name":"culogo","path":"sprites/culogo/culogo.yy",},},
     {"id":{"name":"logo","path":"sprites/logo/logo.yy",},},
     {"id":{"name":"note","path":"sprites/note/note.yy",},},
     {"id":{"name":"noten","path":"sprites/noten/noten.yy",},},
+    {"id":{"name":"sIdle","path":"sprites/sIdle/sIdle.yy",},},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},},
     {"id":{"name":"spr_test_player","path":"sprites/spr_test_player/spr_test_player.yy",},},
+    {"id":{"name":"TileSet","path":"sprites/TileSet/TileSet.yy",},},
+    {"id":{"name":"tTileSet","path":"tilesets/tTileSet/tTileSet.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
+    {"roomId":{"name":"TileSetTester","path":"rooms/TileSetTester/TileSetTester.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

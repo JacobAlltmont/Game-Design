@@ -1,6 +1,7 @@
 {
   "FolderOrderSettings":[
     {"name":"Fonts","order":7,"path":"folders/Fonts.yy",},
+    {"name":"Tile Sets","order":11,"path":"folders/Tile Sets.yy",},
     {"name":"Objects","order":9,"path":"folders/Objects.yy",},
     {"name":"Paths","order":4,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":10,"path":"folders/Rooms.yy",},
@@ -16,11 +17,13 @@
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
     {"name":"obj_test_block","order":6,"path":"objects/obj_test_block/obj_test_block.yy",},
     {"name":"obj_test_player","order":7,"path":"objects/obj_test_player/obj_test_player.yy",},
-    {"name":"b1704ef6_c2af_4dce_9128_b0af61fe91bf","order":5,"path":"sprites/b1704ef6_c2af_4dce_9128_b0af61fe91bf/b1704ef6_c2af_4dce_9128_b0af61fe91bf.yy",},
+    {"name":"TileSetTester","order":1,"path":"rooms/TileSetTester/TileSetTester.yy",},
     {"name":"culogo","order":1,"path":"sprites/culogo/culogo.yy",},
     {"name":"logo","order":2,"path":"sprites/logo/logo.yy",},
     {"name":"note","order":3,"path":"sprites/note/note.yy",},
     {"name":"noten","order":4,"path":"sprites/noten/noten.yy",},
+    {"name":"sIdle","order":8,"path":"sprites/sIdle/sIdle.yy",},
     {"name":"spr_test_player","order":1,"path":"sprites/spr_test_player/spr_test_player.yy",},
+    {"name":"TileSet","order":7,"path":"sprites/TileSet/TileSet.yy",},
   ],
 }
