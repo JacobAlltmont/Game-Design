@@ -35,6 +35,7 @@
     {"id":{"name":"obj_test_block","path":"objects/obj_test_block/obj_test_block.yy",},},
     {"id":{"name":"obj_test_player","path":"objects/obj_test_player/obj_test_player.yy",},},
     {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
+    {"id":{"name":"Vector2","path":"scripts/Vector2/Vector2.yy",},},
     {"id":{"name":"b1704ef6_c2af_4dce_9128_b0af61fe91bf","path":"sprites/b1704ef6_c2af_4dce_9128_b0af61fe91bf/b1704ef6_c2af_4dce_9128_b0af61fe91bf.yy",},},
     {"id":{"name":"crate","path":"sprites/crate/crate.yy",},},
     {"id":{"name":"culogo","path":"sprites/culogo/culogo.yy",},},
