@@ -56,18 +56,18 @@ if (obj_control.gravityMagnitude == 0){
 	}
 }
 
-show_debug_message("1: " + dir.toString())
+//show_debug_message("1: " + dir.toString())
 
 dir.imul(spd)
 
-show_debug_message("2: " + dir.toString())
+//show_debug_message("2: " + dir.toString())
 
 var grav = obj_control.gravityDirection.clone()
 grav.imul(0.1 * obj_control.gravityMagnitude)
 
 dir.iadd(grav)
 
-show_debug_message("3: " + dir.toString())
+//show_debug_message("3: " + dir.toString())
 
 move_and_collide(dir.x,dir.y,abstract_block)
 
