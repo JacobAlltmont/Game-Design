@@ -1,6 +1,9 @@
 // @description move the player based on input
 
-jumpSpeed = 2 / obj_control.gravityMagnitude
+gravD = obj_control.gravityDirection
+gravM = obj_control.gravityMagnitude
+
+jumpSpeed = 2 / gravM
 
 inputs = [
 	keyboard_check(vk_left) or keyboard_check(ord("A")),	//0: left
@@ -9,65 +12,55 @@ inputs = [
 	keyboard_check(vk_down) or keyboard_check(ord("S")),	//3: down
 ]
 
-if (obj_control.gravityMagnitude == 0){
+if (gravM == 0){
 	// whatever we decide for zero gravity
 }else{
-	if obj_control.gravityDirection.x == 0 {
+	jumpIdx = 0 //which input will jump
+	if gravD.x == 0 {
 		dir.x = (inputs[1] ? 1 : 0) - (inputs[0] ? 1 : 0) //move left or right
-		
-		if obj_control.gravityDirection.y == 1 { // down
-			show_debug_message("down")
-			if place_meeting(x,y + 1,abstract_block){ //only jump if on a block
-				dir.y = 0 
-				if (inputs[2]){ //jump up
-					dir.y = -jumpSpeed
-				}
-			}
-			
-		}else if obj_control.gravityDirection.y == -1 { // up
-			show_debug_message("up")
-			if place_meeting(x,y - 1,abstract_block){
-				dir.y = 0 
-				if (inputs[3]){
-					dir.y = jumpSpeed
-				}
-			}
+		if gravD.y == 1 { // down
+			image_angle = 0
+			jumpIdx = 2
+		}else if gravD.y == -1 { // up
+			image_angle = 180
+			jumpIdx = 3
+		}else {
+			show_debug_message("invalid gravity direction" + gravD.toString())
 		}
-	}else if obj_control.gravityDirection.y == 0 {
+	} else if gravD.y == 0 {
 		dir.y = (inputs[3] ? 1 : 0) - (inputs[2] ? 1 : 0)
-		if obj_control.gravityDirection.x == 1 { // right
-			show_debug_message("right")
-			
-			if place_meeting(x + 1,y,abstract_block){
-				dir.x = 0 
-				if (inputs[0]){
-					dir.x = -jumpSpeed
-				}
-			}
-		}else if obj_control.gravityDirection.x == -1 { //left
-			show_debug_message("left")
-			if place_meeting(x - 1,y,abstract_block){
-				dir.x = 0 
-				if (inputs[1]){
-					dir.x = jumpSpeed
-				}
-			}
+		if gravD.x == 1 { // right
+			image_angle = 90
+			jumpIdx = 0
+		}else if gravD.x == -1 { // left
+			image_angle = 270
+			jumpIdx = 1
+		}else {
+			show_debug_message("invalid gravity direction" + gravD.toString())
+		}
+	}
+
+	//jump
+	if place_meeting(x + gravD.x,y + gravD.y,abstract_block){ //only jump if on a block
+		//could maybe multiply by absolute value of inverse or something here too
+		if gravD.x == 0 {
+			dir.y = 0
+		}
+		if gravD.y == 0 {
+			dir.x = 0
+		}
+		if (inputs[jumpIdx]){ //jump up
+			dir.iadd(gravD.mul(-jumpSpeed))
 		}
 	}
 }
 
-//show_debug_message("1: " + dir.toString())
-
 dir.imul(spd)
 
-//show_debug_message("2: " + dir.toString())
-
-var grav = obj_control.gravityDirection.clone()
-grav.imul(0.1 * obj_control.gravityMagnitude)
+var grav = gravD.clone()
+grav.imul(0.1 * gravM)
 
 dir.iadd(grav)
-
-//show_debug_message("3: " + dir.toString())
 
 move_and_collide(dir.x,dir.y,abstract_block)
 
