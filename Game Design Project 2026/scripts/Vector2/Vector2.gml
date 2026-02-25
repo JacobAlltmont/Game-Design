@@ -1,57 +1,100 @@
-/// @function Vector2(_x,_y)
-/// @param {real} _x
-/// @param {real} _y
-/// @returns {Vector2}
-function Vector2(_x, _y) constructor
+function Vector2(x = 0, y = 0) constructor
 {
-    __type = "Vector2";
+    // Explicit instance fields (critical!)
+    self.x = x;
+    self.y = y;
 
-    x = _x;
-    y = _y;
+    // -------------------------
+    // Basic arithmetic
+    // -------------------------
 
-    /// @param {Vector2} other
-    /// @returns {Vector2}
-    static add = function(other)
+    static add = function(v)
     {
-        return new Vector2(x + other.x, y + other.y);
-    }
+        return new Vector2(self.x + v.x, self.y + v.y);
+    };
 
-    /// @param {Vector2} other
-    /// @returns {Vector2}
-    static subtract = function(other)
+    static mul = function(s)
     {
-        return new Vector2(x - other.x, y - other.y);
-    }
+        return new Vector2(self.x * s, self.y * s);
+    };
 
-    /// @param {real} s
-    /// @returns {Vector2}
-    static scale = function(s)
+    // -------------------------
+    // In-place operations (faster, no allocation)
+    // -------------------------
+
+    static iadd = function(v)
     {
-        return new Vector2(x * s, y * s);
-    }
+        self.x += v.x;
+        self.y += v.y;
+        return self;
+    };
 
-    /// @returns {real}
+    static imul = function(s)
+    {
+        self.x *= s;
+        self.y *= s;
+        return self;
+    };
+
+    // -------------------------
+    // Vector math
+    // -------------------------
+
     static length = function()
     {
-        return sqrt(x*x + y*y);
-    }
+        return sqrt(self.x*self.x + self.y*self.y);
+    };
 
-    /// @returns {Vector2}
+    static lengthSq = function()
+    {
+        return self.x*self.x + self.y*self.y;
+    };
+
     static normalize = function()
     {
-        var len = sqrt(x*x + y*y);
-        return len == 0 ? new Vector2(0,0) : new Vector2(x/len, y/len);
-    }
+        var len = sqrt(self.x*self.x + self.y*self.y);
 
-    /// @param {Vector2} other
-    /// @returns {real}
-    static dot = function(other)
+        if (len == 0)
+            return new Vector2(0,0);
+
+        return new Vector2(self.x / len, self.y / len);
+    };
+
+    static dot = function(v)
     {
-        return x * other.x + y * other.y;
-    }
-	
-	static toArray = function()
-	{
-		return [x,y]
-	}
+        return self.x*v.x + self.y*v.y;
+    };
+
+    static distance = function(v)
+    {
+        var dx = self.x - v.x;
+        var dy = self.y - v.y;
+        return sqrt(dx*dx + dy*dy);
+    };
+
+    // -------------------------
+    // Utility
+    // -------------------------
+
+    static clone = function()
+    {
+        return new Vector2(self.x, self.y);
+    };
+
+    static set = function(nx, ny)
+    {
+        self.x = nx;
+        self.y = ny;
+        return self;
+    };
+
+    static isZero = function()
+    {
+        return self.x == 0 && self.y == 0;
+    };
+
+    static toString = function()
+    {
+        return "(" + string(self.x) + ", " + string(self.y) + ")";
+    };
 }

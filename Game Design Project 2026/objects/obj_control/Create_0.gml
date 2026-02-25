@@ -1,8 +1,7 @@
 // @description creates damage function
 
-gravityMagnitude = 0.5
-/// @type {Vector2}
-gravityDirection = new Vector2(0,-1)
+gravityMagnitude = 1.0
+gravityDirection = new Vector2(0,1) // gravity going down by default
 
 window_set_size(1280, 720);	
 
