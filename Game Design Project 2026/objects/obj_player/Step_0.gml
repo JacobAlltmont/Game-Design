@@ -39,18 +39,27 @@ if (gravM == 0){
 			show_debug_message("invalid gravity direction" + gravD.toString())
 		}
 	}
+	
+	// make the player face the direction they are going
+	var result = dir.cross(gravD)
+	if result != 0 {
+		image_xscale = result
+	}
 
 	//jump
 	if place_meeting(x + gravD.x,y + gravD.y,abstract_block){ //only jump if on a block
 		//could maybe multiply by absolute value of inverse or something here too
 		if gravD.x == 0 {
 			dir.y = 0
+			sprite_index = sIdle
 		}
 		if gravD.y == 0 {
 			dir.x = 0
+			sprite_index = sIdle
 		}
 		if (inputs[jumpIdx]){ //jump up
 			dir.iadd(gravD.mul(-jumpSpeed))
+			sprite_index = sJump
 		}
 	}
 }

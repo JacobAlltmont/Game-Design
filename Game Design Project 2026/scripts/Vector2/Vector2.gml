@@ -64,6 +64,11 @@ function Vector2(x = 0, y = 0) constructor
     {
         return self.x*v.x + self.y*v.y;
     };
+	
+	static cross = function(v)
+	{
+		return self.x * v.y - self.y * v.x
+	};
 
     static distance = function(v)
     {
