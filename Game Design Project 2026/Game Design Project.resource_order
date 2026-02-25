@@ -1,7 +1,6 @@
 {
   "FolderOrderSettings":[
     {"name":"Fonts","order":7,"path":"folders/Fonts.yy",},
-    {"name":"Tile Sets","order":11,"path":"folders/Tile Sets.yy",},
     {"name":"Objects","order":9,"path":"folders/Objects.yy",},
     {"name":"Paths","order":4,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":10,"path":"folders/Rooms.yy",},
@@ -9,6 +8,7 @@
     {"name":"Sounds","order":3,"path":"folders/Sounds.yy",},
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
     {"name":"placeholders","order":6,"path":"folders/Sprites/placeholders.yy",},
+    {"name":"Tile Sets","order":11,"path":"folders/Tile Sets.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"abstract_block","order":4,"path":"objects/abstract_block/abstract_block.yy",},
