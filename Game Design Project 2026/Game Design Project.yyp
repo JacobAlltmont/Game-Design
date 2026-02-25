@@ -37,7 +37,7 @@
     {"id":{"name":"obj_test_player","path":"objects/obj_test_player/obj_test_player.yy",},},
     {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"id":{"name":"TileSetTester","path":"rooms/TileSetTester/TileSetTester.yy",},},
-    {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},},
+    {"id":{"name":"Vector2","path":"scripts/Vector2/Vector2.yy",},},
     {"id":{"name":"crate","path":"sprites/crate/crate.yy",},},
     {"id":{"name":"culogo","path":"sprites/culogo/culogo.yy",},},
     {"id":{"name":"logo","path":"sprites/logo/logo.yy",},},
