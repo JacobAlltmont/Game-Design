@@ -1,6 +1,6 @@
 // @description creates damage function
 
-gravityMagnitude = 2
+gravityMagnitude = 1
 gravityDirection = [0,1] //down
 
 window_set_size(1280, 720);	
