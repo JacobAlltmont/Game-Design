@@ -22,8 +22,10 @@
     {"name":"logo","order":2,"path":"sprites/logo/logo.yy",},
     {"name":"note","order":3,"path":"sprites/note/note.yy",},
     {"name":"noten","order":4,"path":"sprites/noten/noten.yy",},
+    {"name":"sDeath","order":10,"path":"sprites/sDeath/sDeath.yy",},
     {"name":"sIdle","order":8,"path":"sprites/sIdle/sIdle.yy",},
     {"name":"spr_test_player","order":1,"path":"sprites/spr_test_player/spr_test_player.yy",},
+    {"name":"sRun","order":9,"path":"sprites/sRun/sRun.yy",},
     {"name":"TileSet","order":7,"path":"sprites/TileSet/TileSet.yy",},
   ],
 }

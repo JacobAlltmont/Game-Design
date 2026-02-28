@@ -93,5 +93,3 @@ dir.iadd(gravD.mul(0.1 * gravM))
 
 //move player
 move_and_collide(dir.x,dir.y,abstract_block)
-
-
