@@ -15,9 +15,13 @@ inputs = [
 if (gravM == 0){
 	// whatever we decide for zero gravity
 }else{
-	jumpIdx = 0 //which input will jump
-	if gravD.x == 0 {
-		dir.x = (inputs[1] ? 1 : 0) - (inputs[0] ? 1 : 0) //move left or right
+	jumpIdx = 2 //up by default 
+	
+	// move the player horixontally (relative to the gravity)
+	// determine which input should be jump
+	// set the image angle depending on the gravity
+	if gravD.x == 0 { //gravity is vertical
+		dir.x = (inputs[1] ? 1 : 0) - (inputs[0] ? 1 : 0) //move horizontally 
 		if gravD.y == 1 { // down
 			image_angle = 0
 			jumpIdx = 2
@@ -27,8 +31,8 @@ if (gravM == 0){
 		}else {
 			show_debug_message("invalid gravity direction" + gravD.toString())
 		}
-	} else if gravD.y == 0 {
-		dir.y = (inputs[3] ? 1 : 0) - (inputs[2] ? 1 : 0)
+	} else if gravD.y == 0 { // if gravity is horizontal
+		dir.y = (inputs[3] ? 1 : 0) - (inputs[2] ? 1 : 0) //move vertically
 		if gravD.x == 1 { // right
 			image_angle = 90
 			jumpIdx = 0
@@ -47,30 +51,47 @@ if (gravM == 0){
 	}
 
 	//jump
-	if place_meeting(x + gravD.x,y + gravD.y,abstract_block){ //only jump if on a block
+	if place_meeting(x + gravD.x,y + gravD.y,abstract_block){ //only jump if standing on a block
 		//could maybe multiply by absolute value of inverse or something here too
-		if gravD.x == 0 {
+		//if on the surface make the sprite sIdle
+		if gravD.x == 0 { // if gravity is vertical
 			dir.y = 0
 			sprite_index = sIdle
-		}
-		if gravD.y == 0 {
+			// if dir.x != 0 {run sprite}
+		} else if gravD.y == 0 { //if gravity is horizontal
 			dir.x = 0
 			sprite_index = sIdle
+			// if dir.y != 0 {run sprite}
 		}
+		
+		
+		// make the player jump
 		if (inputs[jumpIdx]){ //jump up
 			dir.iadd(gravD.mul(-jumpSpeed))
 			sprite_index = sJump
 		}
 	}
+	
+	//if the player's head hit's a block, make sure they don't stick
+	if place_meeting(x - gravD.x, y - gravD.y,abstract_block){ //if there is a block above
+		if dir.dot(gravD.mul(-1)) > 0 { //if heading into the block
+			//set vertical speed to zero
+			if gravD.x == 0 {
+				dir.y = 0
+			} else if gravD.y == 0 {
+				dir.x = 0
+			}
+		}
+	}
 }
 
+//speed multiplier if we want to use it
 dir.imul(spd)
 
-var grav = gravD.clone()
-grav.imul(0.1 * gravM)
+// apply gravity
+dir.iadd(gravD.mul(0.1 * gravM))
 
-dir.iadd(grav)
-
+//move player
 move_and_collide(dir.x,dir.y,abstract_block)
 
 
