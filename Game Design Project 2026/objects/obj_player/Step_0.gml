@@ -50,8 +50,9 @@ if (gravM == 0){
 		image_xscale = result
 	}
 
+
 	//jump
-	if place_meeting(x + gravD.x,y + gravD.y,abstract_block){ //only jump if standing on a block
+	if place_meeting(x + gravD.x,y + gravD.y,collisionBlocks){ //only jump if standing on a block
 		//could maybe multiply by absolute value of inverse or something here too
 		//if on the surface make the sprite sIdle
 		if gravD.x == 0 { // if gravity is vertical
@@ -73,7 +74,7 @@ if (gravM == 0){
 	}
 	
 	//if the player's head hit's a block, make sure they don't stick
-	if place_meeting(x - gravD.x, y - gravD.y,abstract_block){ //if there is a block above
+	if place_meeting(x - gravD.x, y - gravD.y,collisionBlocks){ //if there is a block above
 		if dir.dot(gravD.mul(-1)) > 0 { //if heading into the block
 			//set vertical speed to zero
 			if gravD.x == 0 {
@@ -92,4 +93,4 @@ dir.imul(spd)
 dir.iadd(gravD.mul(0.1 * gravM))
 
 //move player
-move_and_collide(dir.x,dir.y,abstract_block)
+move_and_collide(dir.x,dir.y,collisionBlocks)
