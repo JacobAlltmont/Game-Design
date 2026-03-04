@@ -1,4 +1,4 @@
-/// @description declare damage_obj function
+/// @description declare damage_player function
 
 event_inherited()
 

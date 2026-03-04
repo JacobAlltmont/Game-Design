@@ -1,4 +1,4 @@
-// @description creates damage function
+// @description creates damage function and sets gravity
 
 gravityMagnitude = 0.75
 gravityDirection = new Vector2(0,1) // gravity going down by default
