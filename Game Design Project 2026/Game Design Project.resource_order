@@ -8,8 +8,8 @@
     {"name":"Sounds","order":3,"path":"folders/Sounds.yy",},
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
     {"name":"Enemies","order":15,"path":"folders/Sprites/Enemies.yy",},
-    {"name":"Player","order":16,"path":"folders/Sprites/Player.yy",},
     {"name":"placeholders","order":6,"path":"folders/Sprites/placeholders.yy",},
+    {"name":"Player","order":16,"path":"folders/Sprites/Player.yy",},
     {"name":"Tile Sets","order":11,"path":"folders/Tile Sets.yy",},
   ],
   "ResourceOrderSettings":[
