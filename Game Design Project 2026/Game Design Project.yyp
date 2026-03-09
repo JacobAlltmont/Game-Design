@@ -39,8 +39,9 @@
     {"id":{"name":"obj_test_player","path":"objects/obj_test_player/obj_test_player.yy",},},
     {"id":{"name":"Hallway","path":"rooms/Hallway/Hallway.yy",},},
     {"id":{"name":"Home","path":"rooms/Home/Home.yy",},},
+    {"id":{"name":"Level_1","path":"rooms/Level_1/Level_1.yy",},},
     {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
-    {"id":{"name":"TileSetTester","path":"rooms/TileSetTester/TileSetTester.yy",},},
+    {"id":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"id":{"name":"Vector2","path":"scripts/Vector2/Vector2.yy",},},
     {"id":{"name":"crate","path":"sprites/crate/crate.yy",},},
     {"id":{"name":"culogo","path":"sprites/culogo/culogo.yy",},},
@@ -64,9 +65,10 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
-    {"roomId":{"name":"TileSetTester","path":"rooms/TileSetTester/TileSetTester.yy",},},
+    {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"Home","path":"rooms/Home/Home.yy",},},
     {"roomId":{"name":"Hallway","path":"rooms/Hallway/Hallway.yy",},},
+    {"roomId":{"name":"Level_1","path":"rooms/Level_1/Level_1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
