@@ -27,16 +27,18 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.2.213",
+    "IDEVersion":"2024.14.3.217",
   },
   "name":"Game Design Project",
   "resources":[
     {"id":{"name":"abstract_block","path":"objects/abstract_block/abstract_block.yy",},},
     {"id":{"name":"abstract_enemy","path":"objects/abstract_enemy/abstract_enemy.yy",},},
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
+    {"id":{"name":"obj_green_enemy","path":"objects/obj_green_enemy/obj_green_enemy.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_test_block","path":"objects/obj_test_block/obj_test_block.yy",},},
     {"id":{"name":"obj_test_player","path":"objects/obj_test_player/obj_test_player.yy",},},
+    {"id":{"name":"A_level","path":"rooms/A_level/A_level.yy",},},
     {"id":{"name":"Hallway","path":"rooms/Hallway/Hallway.yy",},},
     {"id":{"name":"Home","path":"rooms/Home/Home.yy",},},
     {"id":{"name":"Level_1","path":"rooms/Level_1/Level_1.yy",},},
@@ -67,10 +69,11 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
-    {"roomId":{"name":"Home","path":"rooms/Home/Home.yy",},},
     {"roomId":{"name":"Hallway","path":"rooms/Hallway/Hallway.yy",},},
     {"roomId":{"name":"Level_1","path":"rooms/Level_1/Level_1.yy",},},
     {"roomId":{"name":"Level_2","path":"rooms/Level_2/Level_2.yy",},},
+    {"roomId":{"name":"A_level","path":"rooms/A_level/A_level.yy",},},
+    {"roomId":{"name":"Home","path":"rooms/Home/Home.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
