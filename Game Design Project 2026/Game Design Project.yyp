@@ -27,7 +27,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.2.213",
   },
   "name":"Game Design Project",
   "resources":[
@@ -35,9 +35,9 @@
     {"id":{"name":"abstract_enemy","path":"objects/abstract_enemy/abstract_enemy.yy",},},
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
     {"id":{"name":"obj_goal","path":"objects/obj_goal/obj_goal.yy",},},
+    {"id":{"name":"obj_green_enemy","path":"objects/obj_green_enemy/obj_green_enemy.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_test_block","path":"objects/obj_test_block/obj_test_block.yy",},},
-    {"id":{"name":"obj_green_enemy","path":"objects/obj_green_enemy/obj_green_enemy.yy",},},
     {"id":{"name":"A_level","path":"rooms/A_level/A_level.yy",},},
     {"id":{"name":"Hallway","path":"rooms/Hallway/Hallway.yy",},},
     {"id":{"name":"Home","path":"rooms/Home/Home.yy",},},
