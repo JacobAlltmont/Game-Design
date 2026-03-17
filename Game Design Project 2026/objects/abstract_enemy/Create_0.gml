@@ -3,6 +3,7 @@
 event_inherited()
 
 hp = 1
+can_shoot = true
 
 /// @function damage_player(obj,amount);
 /// @description damages obj by amount

@@ -33,7 +33,9 @@
   "resources":[
     {"id":{"name":"abstract_block","path":"objects/abstract_block/abstract_block.yy",},},
     {"id":{"name":"abstract_enemy","path":"objects/abstract_enemy/abstract_enemy.yy",},},
+    {"id":{"name":"obj_bullet_enemy","path":"objects/obj_bullet_enemy/obj_bullet_enemy.yy",},},
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
+    {"id":{"name":"obj_enemy_blue","path":"objects/obj_enemy_blue/obj_enemy_blue.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_test_block","path":"objects/obj_test_block/obj_test_block.yy",},},
     {"id":{"name":"obj_test_player","path":"objects/obj_test_player/obj_test_player.yy",},},
@@ -57,6 +59,8 @@
     {"id":{"name":"sIdle","path":"sprites/sIdle/sIdle.yy",},},
     {"id":{"name":"sJump","path":"sprites/sJump/sJump.yy",},},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},},
+    {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},},
+    {"id":{"name":"spr_enemy_blue","path":"sprites/spr_enemy_blue/spr_enemy_blue.yy",},},
     {"id":{"name":"spr_test_player","path":"sprites/spr_test_player/spr_test_player.yy",},},
     {"id":{"name":"sRun","path":"sprites/sRun/sRun.yy",},},
     {"id":{"name":"TileSet","path":"sprites/TileSet/TileSet.yy",},},
