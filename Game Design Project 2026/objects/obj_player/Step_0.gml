@@ -10,10 +10,38 @@ inputs = [
 	keyboard_check(vk_right) or keyboard_check(ord("D")),	//1: right
 	keyboard_check(vk_up) or keyboard_check(ord("W")),		//2: up
 	keyboard_check(vk_down) or keyboard_check(ord("S")),	//3: down
+	keyboard_check(vk_space)								//4: jump (zero g only)
 ]
 
-if (gravM == 0){
-	// whatever we decide for zero gravity
+if (gravD.x == 0 and gravD.y == 0){ // zero gravity
+	show_debug_message("running 0 g")
+	// if you are touching a surface, you can jump directly away from the surface
+	// by pressing the space key
+	var jumpDirection = new Vector2(0,0) 
+	for (var i = 0; i < 4; i++){
+		var vector = directions[i]
+		if place_meeting(x + vector.x,y + vector.y,collisionBlocks){
+			jumpDirection = vector.mul(-1)
+			break
+		}
+	}
+	if jumpDirection.x == 0 and jumpDirection.y == 0{ // in the air
+		//if you are in the air, your jetpack will accelerate you
+		//depending on input
+		//may also want a topSpeed variable so it doesn't go too fast
+		dir.x -= inputs[0] ? 0.1 : 0
+		dir.x += inputs[1] ? 0.1 : 0
+		dir.y -= inputs[2] ? 0.1 : 0
+		dir.y += inputs[3] ? 0.1 : 0
+	} else { // touching a block
+		//if you are on a block, you cannot move until you jump
+		//ideally you can slide along the block but we don't have that yet
+		dir = new Vector2(0,0)
+		if inputs[4] {
+			dir = jumpDirection.mul(jumpSpeed / 2)
+		}
+	}
+	show_debug_message(dir.toString())
 }else{
 	jumpIdx = 2 //up by default 
 	
@@ -58,13 +86,16 @@ if (gravM == 0){
 		if gravD.x == 0 { // if gravity is vertical
 			dir.y = 0
 			sprite_index = sIdle
-			// if dir.x != 0 {run sprite}
+			 if dir.x != 0 {
+				 sprite_index = sRun
+			 }
 		} else if gravD.y == 0 { //if gravity is horizontal
 			dir.x = 0
 			sprite_index = sIdle
-			// if dir.y != 0 {run sprite}
+			 if dir.y != 0 {
+				 sprite_index = sRun
+			 }
 		}
-		
 		
 		// make the player jump
 		if (inputs[jumpIdx]){ //jump up
