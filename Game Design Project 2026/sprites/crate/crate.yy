@@ -3,7 +3,7 @@
   "%Name":"crate",
   "bboxMode":0,
   "bbox_bottom":1535,
-  "bbox_left":0,
+  "bbox_left":44,
   "bbox_right":1023,
   "bbox_top":0,
   "collisionKind":1,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"d0897d9f-b04a-4dc7-a19f-0e0c8d0a54c9","name":"d0897d9f-b04a-4dc7-a19f-0e0c8d0a54c9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"15021477-c7ed-459d-add3-ecd9d2089e90","name":"15021477-c7ed-459d-add3-ecd9d2089e90","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":1536,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"73009fd6-c016-4bad-b0ac-76490aa1d352","blendMode":0,"displayName":"default","isLocked":false,"name":"73009fd6-c016-4bad-b0ac-76490aa1d352","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"92b6a60f-d43a-4d46-9161-d039900befc9","blendMode":0,"displayName":"default","isLocked":false,"name":"92b6a60f-d43a-4d46-9161-d039900befc9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"crate",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d0897d9f-b04a-4dc7-a19f-0e0c8d0a54c9","path":"sprites/crate/crate.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f0e15630-bf64-40a0-ab69-760d609da8f3","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"15021477-c7ed-459d-add3-ecd9d2089e90","path":"sprites/crate/crate.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"358742b8-6832-45b8-abae-57f8e311a968","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
