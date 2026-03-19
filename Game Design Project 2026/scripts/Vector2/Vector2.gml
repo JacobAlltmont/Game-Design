@@ -102,4 +102,9 @@ function Vector2(x = 0, y = 0) constructor
     {
         return "(" + string(self.x) + ", " + string(self.y) + ")";
     };
+	
+	static equals = function(v)
+	{
+		return self.x == v.x and self.y == v.y;
+	};
 }
