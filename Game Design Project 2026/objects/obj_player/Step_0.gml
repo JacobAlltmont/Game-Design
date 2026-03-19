@@ -78,7 +78,6 @@ if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 		image_xscale = result
 	}
 
-
 	//jump
 	if place_meeting(x + gravD.x,y + gravD.y,collisionBlocks){ //only jump if standing on a block
 		//could maybe multiply by absolute value of inverse or something here too
@@ -96,7 +95,6 @@ if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 				 sprite_index = sRun
 			 }
 		}
-		
 		// make the player jump
 		if (inputs[jumpIdx]){ //jump up
 			dir.iadd(gravD.mul(-jumpSpeed))
