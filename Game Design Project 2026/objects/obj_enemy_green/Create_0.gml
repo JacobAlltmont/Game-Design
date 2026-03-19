@@ -1,4 +1,4 @@
-/// @description Initialize AI, physics, and vectors
+/// @description Initialize enemy
 
 // Vector
 dir = new Vector2(0,0);
