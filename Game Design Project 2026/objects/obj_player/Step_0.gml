@@ -156,6 +156,8 @@ if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 	}
 }
 
+show_debug_message(hp)
+
 //speed multiplier if we want to use it
 dir.imul(spd)
 
