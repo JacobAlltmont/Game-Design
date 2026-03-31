@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"sDeath",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":19,
   "bbox_left":4,
   "bbox_right":20,

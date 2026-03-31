@@ -38,17 +38,19 @@ if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 	for (var i = 0; i < 4; i++){ // go through each direction and check if there is a surface
 		var vector = directions[i]
 		if place_meeting(x + vector.x,y + vector.y,collisionBlocks){
-			//make player have their feet on the wall
 			if !onSurface{ // if this is the first surface we find, set dir to 0,0
+				//TODO: fix the bug with this line
+				//image_angle = vector.angleDegrees(new Vector2(0,1))
 				dir = new Vector2(0,0)
+				onSurface = true
 			}
-			onSurface = true
 			for (var j = 0; j < 4; j++){
-				if !getInput(directions[j]) continue
-				switch vector.cross(directions[j]){
+				var vectorj = directions[j]
+				if !getInput(vectorj) continue
+				switch vector.cross(vectorj){
 				case 0: // parallel or perpendicular
 					if !inputs[4] continue //if we are not jumping don't do anything
-					if directions[j].equals(vector) { //same
+					if vectorj.equals(vector) { //same
 						jumpMultiplier *= 0.75
 					}else{ //opposite
 						jumpMultiplier *= 1.5
@@ -56,10 +58,9 @@ if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 					break;
 				case 1: //slide along the surface
 				case -1://if we are jumping this will affect direction
-					dir.iadd(directions[j]) 
+					dir.iadd(vectorj) 
 					break;
 				}
-				
 			}
 			if inputs[4]{
 				dir.iadd(vector.mul(-1))
@@ -81,10 +82,10 @@ if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 		if dir.length() > topSpeed{
 			dir = dir.normalize().mul(topSpeed)
 		}
-		//make them face the direction they are facing
+		//image_angle = dir.angleDegrees(new Vector2(0,-1))
 	}
-}else{
-	jumpIdx = 2 //up by default 
+}else{ // normal gravity
+	jumpIdx = -1
 	
 	// move the player horixontally (relative to the gravity)
 	// determine which input should be jump
@@ -97,8 +98,6 @@ if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 		}else if gravD.y == -1 { // up
 			image_angle = 180
 			jumpIdx = 3
-		}else {
-			show_debug_message("invalid gravity direction" + gravD.toString())
 		}
 	} else if gravD.y == 0 { // if gravity is horizontal
 		dir.y = (inputs[3] ? 1 : 0) - (inputs[2] ? 1 : 0) //move vertically
@@ -108,9 +107,11 @@ if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 		}else if gravD.x == -1 { // left
 			image_angle = 270
 			jumpIdx = 1
-		}else {
-			show_debug_message("invalid gravity direction" + gravD.toString())
 		}
+	}
+	if jumpIdx < 0 {
+		throw "Error: Gravity Direction " + gravD.toString() + " is invalid"
+		return
 	}
 	
 	// make the player face the direction they are going

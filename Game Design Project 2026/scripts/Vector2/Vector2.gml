@@ -70,6 +70,34 @@ function Vector2(x = 0, y = 0) constructor
 		return self.x * v.y - self.y * v.x
 	};
 
+	static rotate = function(angle)
+	{
+		// Rotate this vector counterclockwise by `angle` (radians)
+		var c = cos(angle);
+		var s = sin(angle);
+		return new Vector2(self.x * c - self.y * s,
+		                   self.x * s + self.y * c);
+	};
+
+    static rotateDegrees = function(angle)
+    {
+        return self.rotate(angle * (pi / 180));
+    };
+
+	static angle = function(v)
+	{
+		// Signed counterclockwise angle from this vector to v (radians)
+		// Positive when v is counterclockwise from self.
+		var d = self.x*v.x + self.y*v.y;
+		var c = self.x*v.y - self.y*v.x;
+		return arctan2(c, d);
+	};
+
+    static angleDegrees = function(v)
+    {
+        return self.angle(v) * (180 / pi);
+    };
+
     static distance = function(v)
     {
         var dx = self.x - v.x;
