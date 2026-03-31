@@ -4,12 +4,8 @@
 dir = new Vector2(0,0)
 spd = 1 // speed constant
 collisionBlocks = [abstract_block,layer_tilemap_get_id(layer_get_id("Ground"))]
-directions = [
-	new Vector2(0,1),
-	new Vector2(0,-1),
-	new Vector2(1,0),
-	new Vector2(-1,0)
-]
+directions = pointer_null
+inputs = pointer_null
 
 //facing_right = true
 

@@ -1,5 +1,14 @@
 // @description move the player based on input
 
+getInput = function(v){
+	if directions == pointer_null return false
+	if inputs == pointer_null return false
+	for (var i = 0; i < 4; i++){
+		if directions[i].equals(v) return inputs[i]
+	}
+	return false
+}
+
 gravD = obj_control.gravityDirection
 gravM = obj_control.gravityMagnitude
 
@@ -12,36 +21,68 @@ inputs = [
 	keyboard_check(vk_down) or keyboard_check(ord("S")),	//3: down
 	keyboard_check(vk_space)								//4: jump (zero g only)
 ]
+if directions == pointer_null {
+	directions = [
+		new Vector2(-1,0),	//left
+		new Vector2(1,0),	//right
+		new Vector2(0,-1),	//up
+		new Vector2(0,1)	//down
+	]
+}
 
 if (gravD.x == 0 and gravD.y == 0){ // zero gravity
-	show_debug_message("running 0 g")
-	// if you are touching a surface, you can jump directly away from the surface
+	// if you are touching a surface, you can jump  away from the surface
 	// by pressing the space key
-	var jumpDirection = new Vector2(0,0) 
-	for (var i = 0; i < 4; i++){
+	var onSurface = false
+	var jumpMultiplier = 1.2
+	for (var i = 0; i < 4; i++){ // go through each direction and check if there is a surface
 		var vector = directions[i]
 		if place_meeting(x + vector.x,y + vector.y,collisionBlocks){
-			jumpDirection = vector.mul(-1)
-			break
+			//make player have their feet on the wall
+			if !onSurface{ // if this is the first surface we find, set dir to 0,0
+				dir = new Vector2(0,0)
+			}
+			onSurface = true
+			for (var j = 0; j < 4; j++){
+				if !getInput(directions[j]) continue
+				switch vector.cross(directions[j]){
+				case 0: // parallel or perpendicular
+					if !inputs[4] continue //if we are not jumping don't do anything
+					if directions[j].equals(vector) { //same
+						jumpMultiplier *= 0.75
+					}else{ //opposite
+						jumpMultiplier *= 1.5
+					}
+					break;
+				case 1: //slide along the surface
+				case -1://if we are jumping this will affect direction
+					dir.iadd(directions[j]) 
+					break;
+				}
+				
+			}
+			if inputs[4]{
+				dir.iadd(vector.mul(-1))
+			}
 		}
 	}
-	if jumpDirection.x == 0 and jumpDirection.y == 0{ // in the air
+	if onSurface { // if you were on a surface apply the jump multiplier now
+		dir.imul(jumpMultiplier)
+	} else { // if you are in the air, accelerate with a jetpack
 		//if you are in the air, your jetpack will accelerate you
 		//depending on input
 		//may also want a topSpeed variable so it doesn't go too fast
-		dir.x -= inputs[0] ? 0.1 : 0
-		dir.x += inputs[1] ? 0.1 : 0
-		dir.y -= inputs[2] ? 0.1 : 0
-		dir.y += inputs[3] ? 0.1 : 0
-	} else { // touching a block
-		//if you are on a block, you cannot move until you jump
-		//ideally you can slide along the block but we don't have that yet
-		dir = new Vector2(0,0)
-		if inputs[4] {
-			dir = jumpDirection.mul(jumpSpeed / 2)
+		acceleration = 0.05
+		topSpeed = 3
+		dir.x -= inputs[0] ? acceleration : 0
+		dir.x += inputs[1] ? acceleration : 0
+		dir.y -= inputs[2] ? acceleration : 0
+		dir.y += inputs[3] ? acceleration : 0
+		if dir.length() > topSpeed{
+			dir = dir.normalize().mul(topSpeed)
 		}
+		//make them face the direction they are facing
 	}
-	show_debug_message(dir.toString())
 }else{
 	jumpIdx = 2 //up by default 
 	
