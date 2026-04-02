@@ -35,6 +35,8 @@ if (dir.x != 0 || dir.y != 0) {
 }
 
 
+
+
 dir.imul(spd);
 dir.iadd(gravD.mul(0.1 * gravM)); 
 
