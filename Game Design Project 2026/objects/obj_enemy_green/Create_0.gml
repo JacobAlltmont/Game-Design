@@ -14,7 +14,7 @@ directions = [
 ];
 
 move_dir = 1;        
-          
+hp = 10          
 dmg = 1;
 can_move = true;  
 
