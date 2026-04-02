@@ -2,7 +2,6 @@
 
 /// @type {Vector2}
 dir = new Vector2(0,0)
-spd = 1 // speed constant
 collisionBlocks = [abstract_block,layer_tilemap_get_id(layer_get_id("Ground"))]
 directions = pointer_null
 inputs = pointer_null

@@ -159,12 +159,13 @@ if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 
 show_debug_message(hp)
 
-//speed multiplier if we want to use it
-dir.imul(spd)
-
 // apply gravity
 dir.iadd(gravD.mul(0.1 * gravM))
 
 //move player
 move_and_collide(dir.x,dir.y,collisionBlocks)
+
+if x > room_width or x < 0  or y > room_height or y < 0 {
+	room_restart()
+}
 
