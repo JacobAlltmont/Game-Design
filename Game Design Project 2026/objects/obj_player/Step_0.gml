@@ -9,6 +9,7 @@ getInput = function(v){
 	return false
 }
 
+// shoot bullet
 if (mouse_check_button_pressed(mb_left)) {
     var bullet = instance_create_layer(x, y, "Instances", obj_bullet_player);
     show_debug_message("SHOOTING!");
@@ -18,6 +19,7 @@ if (mouse_check_button_pressed(mb_left)) {
            bullet.direction = 180;
        }
 }
+
 
 gravD = obj_control.gravityDirection
 gravM = obj_control.gravityMagnitude
@@ -174,6 +176,23 @@ dir.imul(spd)
 
 // apply gravity
 dir.iadd(gravD.mul(0.1 * gravM))
+
+// ladder climbing 
+var _layer = layer_get_id("ladder");
+var map = layer_tilemap_get_id(_layer);
+var tile_data = tilemap_get_at_pixel(map, x, y);
+// we are on a ladder
+if (tile_data > 0) {
+    if (gravD.y != 0) dir.y = 0; 
+    if (gravD.x != 0) dir.x = 0;
+    
+    // vertical movement
+    if (keyboard_check(vk_up)) {
+        dir.y -= 3;
+    } else if (keyboard_check(vk_down)) {
+        dir.y += 3;
+    }
+} 
 
 //move player
 move_and_collide(dir.x,dir.y,collisionBlocks)
