@@ -2,6 +2,9 @@
 
 var p = instance_nearest(x, y, obj_player);
 
+if hp <= 0{
+	instance_destroy(id, true)
+}
 
 if (instance_exists(p)) {
 	var dir = point_direction(x, y, p.x, p.y)

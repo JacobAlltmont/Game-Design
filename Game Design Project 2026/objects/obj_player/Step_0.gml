@@ -9,6 +9,16 @@ getInput = function(v){
 	return false
 }
 
+if (mouse_check_button_pressed(mb_left)) {
+    var bullet = instance_create_layer(x, y, "Instances", obj_bullet_player);
+    show_debug_message("SHOOTING!");
+   if (image_xscale > 0) {
+           bullet.direction = 0;
+       } else {
+           bullet.direction = 180;
+       }
+}
+
 gravD = obj_control.gravityDirection
 gravM = obj_control.gravityMagnitude
 
