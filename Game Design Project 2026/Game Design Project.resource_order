@@ -6,7 +6,6 @@
     {"name":"obj_breakable_h","order":9,"path":"objects/obj_breakable_h/obj_breakable_h.yy",},
     {"name":"obj_breakable_v","order":10,"path":"objects/obj_breakable_v/obj_breakable_v.yy",},
     {"name":"obj_bullet_player","order":1,"path":"objects/obj_bullet_player/obj_bullet_player.yy",},
-    {"name":"obj_camera","order":5,"path":"objects/obj_camera/obj_camera.yy",},
     {"name":"obj_crate","order":2,"path":"objects/obj_crate/obj_crate.yy",},
     {"name":"obj_gem","order":8,"path":"objects/obj_gem/obj_gem.yy",},
     {"name":"obj_ladder","order":7,"path":"objects/obj_ladder/obj_ladder.yy",},
