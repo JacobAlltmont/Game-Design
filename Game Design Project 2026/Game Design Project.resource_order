@@ -1,6 +1,21 @@
 {
-  "FolderOrderSettings":[],
+  "FolderOrderSettings":[
+    {"name":"spr_player","order":3,"path":"folders/Sprites/spr_player.yy",},
+  ],
   "ResourceOrderSettings":[
     {"name":"obj_bullet_player","order":1,"path":"objects/obj_bullet_player/obj_bullet_player.yy",},
+    {"name":"obj_crate","order":2,"path":"objects/obj_crate/obj_crate.yy",},
+    {"name":"obj_note","order":3,"path":"objects/obj_note/obj_note.yy",},
+    {"name":"obj_player_1","order":4,"path":"objects/obj_player_1/obj_player_1.yy",},
+    {"name":"Test2","order":1,"path":"rooms/Test2/Test2.yy",},
+    {"name":"spr_crate","order":1,"path":"sprites/spr_crate/spr_crate.yy",},
+    {"name":"spr_note","order":2,"path":"sprites/spr_note/spr_note.yy",},
+    {"name":"spr_player_basic_attack","order":3,"path":"sprites/spr_player_basic_attack/spr_player_basic_attack.yy",},
+    {"name":"spr_player_death","order":4,"path":"sprites/spr_player_death/spr_player_death.yy",},
+    {"name":"spr_player_jump","order":5,"path":"sprites/spr_player_jump/spr_player_jump.yy",},
+    {"name":"spr_player_power_swing","order":6,"path":"sprites/spr_player_power_swing/spr_player_power_swing.yy",},
+    {"name":"spr_player_ultimate_attack","order":7,"path":"sprites/spr_player_ultimate_attack/spr_player_ultimate_attack.yy",},
+    {"name":"spr_player_walk","order":1,"path":"sprites/spr_player_walk/spr_player_walk.yy",},
+    {"name":"spr_player_walk2","order":2,"path":"sprites/spr_player_walk2/spr_player_walk2.yy",},
   ],
 }
