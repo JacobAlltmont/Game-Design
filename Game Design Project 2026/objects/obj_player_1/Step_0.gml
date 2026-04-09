@@ -197,3 +197,8 @@ if (tile_data > 0) {
 //move player
 move_and_collide(dir.x,dir.y,collisionBlocks)
 
+//Placeholder until we figure out when and where the game ends
+if hp > 0 {
+	global.score += .001
+	show_debug_message(global.score);
+}
