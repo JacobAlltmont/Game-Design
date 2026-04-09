@@ -1,5 +1,7 @@
-
-if other {
-	damage_player(other, 1)
-	instance_destroy(id, true)
+if other.hp != 0 {
+other.hp -= 1;
+show_debug_message(other.hp)
+} else {
+	show_debug_message("player dead")
 }
+instance_destroy(id, true)
