@@ -200,5 +200,11 @@ move_and_collide(dir.x,dir.y,collisionBlocks)
 //Placeholder until we figure out when and where the game ends
 if hp > 0 {
 	global.score += .001
-	show_debug_message(global.score);
+	if global.gem_multiplier == 0{
+		global.gem_multiplier +=1
+	} else {
+		global.gem_multiplier = global.gems_collected
+	}
+	
+	show_debug_message(global.score*global.gem_multiplier);
 }

@@ -102,8 +102,8 @@
     {"roomId":{"name":"A_level","path":"rooms/A_level/A_level.yy",},},
     {"roomId":{"name":"Home","path":"rooms/Home/Home.yy",},},
     {"roomId":{"name":"B_level","path":"rooms/B_level/B_level.yy",},},
-    {"roomId":{"name":"Level_2","path":"rooms/Level_2/Level_2.yy",},},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
+    {"roomId":{"name":"Level_2","path":"rooms/Level_2/Level_2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

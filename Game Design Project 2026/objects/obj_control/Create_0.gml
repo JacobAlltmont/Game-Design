@@ -1,6 +1,9 @@
 // @description creates damage function and sets gravity
 
 global.score = 0
+global.gems_collected = 0
+global.gem_multiplier = 0
+
 gravityMagnitude = 0.75
 gravityDirection = new Vector2(0,1) // gravity going down by default
 
