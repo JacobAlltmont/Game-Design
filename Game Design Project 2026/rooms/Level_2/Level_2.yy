@@ -14,9 +14,6 @@
     {"name":"inst_4EFA8C65","path":"rooms/Level_2/Level_2.yy",},
     {"name":"inst_53DC1443","path":"rooms/Level_2/Level_2.yy",},
     {"name":"inst_5F4B2C39","path":"rooms/Level_2/Level_2.yy",},
-    {"name":"inst_680A4596","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_67D2726","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_7DDA9CF1","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[

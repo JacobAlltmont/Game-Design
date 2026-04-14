@@ -1,7 +1,14 @@
 
 if (keyboard_check_pressed(vk_escape)) {
 
-	paused = !paused
-	update_pause()
+	if (!paused) {
+		
+		open_pause()
+		
+	} else {
+		
+		close_ui()
+		
+	}
 
 }

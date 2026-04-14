@@ -4,8 +4,7 @@
 switch (button_id) {
 
 	case 0: // Resume
-		obj_pause_manager.paused = false
-		obj_pause_manager.update_pause()
+		obj_pause_manager.close_ui()
 	break
 	
 	case 1: // Restart
