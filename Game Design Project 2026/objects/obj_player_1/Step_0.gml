@@ -178,11 +178,7 @@ dir.imul(spd)
 dir.iadd(gravD.mul(0.1 * gravM))
 
 // ladder climbing 
-var _layer = layer_get_id("ladder");
-var map = layer_tilemap_get_id(_layer);
-var tile_data = tilemap_get_at_pixel(map, x, y);
-// we are on a ladder
-if (tile_data > 0) {
+if (place_meeting(x, y, obj_ladder)) {
     if (gravD.y != 0) dir.y = 0; 
     if (gravD.x != 0) dir.x = 0;
     
@@ -192,8 +188,19 @@ if (tile_data > 0) {
     } else if (keyboard_check(vk_down)) {
         dir.y += 3;
     }
-} 
+}
 
 //move player
 move_and_collide(dir.x,dir.y,collisionBlocks)
 
+//Placeholder until we figure out when and where the game ends
+if hp > 0 {
+	global.score += .001
+	if global.gem_multiplier == 0{
+		global.gem_multiplier +=1
+	} else {
+		global.gem_multiplier = global.gems_collected
+	}
+	
+	show_debug_message(global.score*global.gem_multiplier);
+}
