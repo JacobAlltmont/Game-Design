@@ -13,6 +13,7 @@
     {"name":"obj_crate","order":2,"path":"objects/obj_crate/obj_crate.yy",},
     {"name":"obj_gem","order":8,"path":"objects/obj_gem/obj_gem.yy",},
     {"name":"obj_ladder","order":7,"path":"objects/obj_ladder/obj_ladder.yy",},
+    {"name":"obj_note_pickaxe","order":16,"path":"objects/obj_note_pickaxe/obj_note_pickaxe.yy",},
     {"name":"obj_note","order":3,"path":"objects/obj_note/obj_note.yy",},
     {"name":"obj_pause_manager","order":13,"path":"objects/obj_pause_manager/obj_pause_manager.yy",},
     {"name":"obj_pickaxe","order":6,"path":"objects/obj_pickaxe/obj_pickaxe.yy",},
