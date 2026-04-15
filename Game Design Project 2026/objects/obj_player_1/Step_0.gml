@@ -241,13 +241,13 @@ if (keyBasicAttack) {
 } else if (keyPowerSwing && powerSwingCooldown <= 0) {
 	
 	attackType = PLAYERATTACK.POWER
-	powerSwingCooldown = 30
+	powerSwingCooldown = 300
 	state = PLAYERSTATE.ATTACK
 	
 } else if (keyUltimateAttack && ultimateAttackCooldown <= 0) {
 	
 	attackType = PLAYERATTACK.ULTIMATE
-	ultimateAttackCooldown = 180
+	ultimateAttackCooldown = 1000
 	state = PLAYERSTATE.ATTACK
 	
 }
