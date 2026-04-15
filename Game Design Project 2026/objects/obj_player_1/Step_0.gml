@@ -9,6 +9,33 @@ getInput = function(v){
 	return false
 }
 
+// keys for attacks
+var keyBasicAttack = keyboard_check_pressed(ord("Q"))
+var keyPowerSwing = keyboard_check_pressed(ord("E"))
+var keyUltimateAttack = keyboard_check_pressed(ord("R"))
+
+// cooldowns for attacks
+if (powerSwingCooldown > 0) powerSwingCooldown--
+if (ultimateAttackCooldown > 0) ultimateAttackCooldown--
+
+if (hurtFlashTimer > 0) { // player flashes red when taking damage
+	
+	hurtFlashTimer--
+	image_blend = c_red
+	
+} else {
+	
+	image_blend = c_white
+	
+}
+
+if (state == PLAYERSTATE.ATTACK) {
+	
+	PlayerState_Attack()
+	return
+	
+}
+
 // shoot bullet
 if (mouse_check_button_pressed(mb_left)) {
     var bullet = instance_create_layer(x, y, "Instances", obj_bullet_player);
@@ -203,4 +230,24 @@ if hp > 0 {
 	}
 	
 	show_debug_message(global.score*global.gem_multiplier);
+}
+
+// manage player state
+if (keyBasicAttack) {
+	
+	attackType = PLAYERATTACK.BASIC
+	state = PLAYERSTATE.ATTACK
+	
+} else if (keyPowerSwing && powerSwingCooldown <= 0) {
+	
+	attackType = PLAYERATTACK.POWER
+	powerSwingCooldown = 30
+	state = PLAYERSTATE.ATTACK
+	
+} else if (keyUltimateAttack && ultimateAttackCooldown <= 0) {
+	
+	attackType = PLAYERATTACK.ULTIMATE
+	ultimateAttackCooldown = 180
+	state = PLAYERSTATE.ATTACK
+	
 }

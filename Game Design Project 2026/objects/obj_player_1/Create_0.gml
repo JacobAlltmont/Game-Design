@@ -11,8 +11,8 @@ isPlayer = true
 
 //facing_right = true
 
-if(instance_number(obj_player) > 1){
-	throw ("Error (obj_player.Create): an instance of obj_player was created when one already existed")
+if(instance_number(obj_player_1) > 1){
+	throw ("Error (obj_player_1.Create): an instance of obj_player_1 was created when one already existed")
 }
 
 /// @function damage_enemy(obj,amount);
@@ -27,3 +27,28 @@ damage_player = function(obj,amount){
 
 hp = 100 //placeholder
 
+hurtFlashTimer = 0
+
+powerSwingCooldown = 0
+ultimateAttackCooldown = 0
+
+attackType = PLAYERATTACK.BASIC
+state = PLAYERSTATE.FREE
+
+hitByAttack = ds_list_create()
+
+hurtbox = instance_create_layer(x, y, "Instances", obj_player_hurtbox)
+hurtbox.owner = id
+
+enum PLAYERSTATE
+{
+	FREE,
+	ATTACK,
+}
+
+enum PLAYERATTACK
+{
+	BASIC,
+	POWER,
+	ULTIMATE,
+}
