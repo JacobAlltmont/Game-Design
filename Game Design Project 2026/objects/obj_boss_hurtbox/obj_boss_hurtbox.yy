@@ -35,5 +35,5 @@
     "path":"sprites/spr_boss_idle_HURTBOX/spr_boss_idle_HURTBOX.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

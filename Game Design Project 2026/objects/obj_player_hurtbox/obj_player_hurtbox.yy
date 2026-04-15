@@ -35,5 +35,5 @@
     "path":"sprites/spr_player_idle_HURTBOX/spr_player_idle_HURTBOX.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
