@@ -2,11 +2,11 @@
 
 global.score = 0
 global.gems_collected = 0
-global.gem_multiplier = global.gems_collected - global.deaths_decrease
 global.deaths = 0
 global.deaths_decrease = global.deaths / 2
 global.boss_death = false
 global.final_score = 0
+global.gem_multiplier = global.gems_collected - global.deaths_decrease
 
 
 

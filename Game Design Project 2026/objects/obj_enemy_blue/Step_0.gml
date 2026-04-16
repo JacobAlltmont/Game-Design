@@ -14,7 +14,7 @@ if (instance_exists(p)) {
 
 if (instance_exists(p) and can_shoot)	{
 	    var dir = point_direction(x, y, p.x, p.y);
-	    var spd = 6;
+	    var spd = 2;
 
 	    b = instance_create_layer(x, y, "Instances", obj_bullet_enemy);
 		show_debug_message("bullet made")
@@ -23,7 +23,7 @@ if (instance_exists(p) and can_shoot)	{
 	        motion_set(dir, spd);
 	        //bullet_color = other.enemy_color;
 	    }
-		can_shoot = false
-		alarm[0] = game_get_speed(gamespeed_fps)
+		can_shoot = true
+		alarm[0] = 10
 
 	}
