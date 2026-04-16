@@ -2,7 +2,20 @@
 
 global.score = 0
 global.gems_collected = 0
-global.gem_multiplier = 0
+global.gem_multiplier = global.gems_collected - global.deaths_decrease
+global.deaths = 0
+global.deaths_decrease = global.deaths / 2
+global.boss_death = false
+global.final_score = 0
+
+
+
+function calculate_score(){
+	if global.boss_death = true {
+		global.final_score = global.score * global.gem_multiplier
+	}
+}
+
 
 gravityMagnitude = 0.75
 gravityDirection = new Vector2(0,1) // gravity going down by default
