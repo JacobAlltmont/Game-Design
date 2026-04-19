@@ -205,6 +205,20 @@ for (var i = 0; i < 4; i++){
 	y += tempDir.y
 }
 
+//if player off screen, kill player and reset
+if	(x > room_width + sprite_width) ||
+	(x < -sprite_width) ||
+	(y > room_height + sprite_height) ||
+	(y < - sprite_height) {
+		x = spawn.x
+		y = spawn.y
+		global.deaths++
+		dir = new Vector2(0,0)
+		hp = basehp
+		powerSwingCooldown = 0
+		ultimateAttackCooldown = 0
+}
+
 //Placeholder until we figure out when and where the game ends
 if hp > 0 {
 	global.score += .001

@@ -1,6 +1,7 @@
 /// @description initialize hp and speed
 
 /// @type {Vector2}
+spawn = new Vector2(x,y)
 dir = new Vector2(0,0)
 spd = 1 // speed constant
 collisionBlocks = [abstract_block,layer_tilemap_get_id(layer_get_id("Ground"))]
@@ -34,7 +35,8 @@ damage_player = function(obj,amount){
 	}
 }
 
-hp = 100 //placeholder
+basehp = 100
+hp = basehp //placeholder
 
 hurtFlashTimer = 0
 
