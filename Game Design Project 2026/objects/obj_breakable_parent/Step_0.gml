@@ -1,20 +1,21 @@
 
-var player_touching = false
-
-player_touching =
-	place_meeting(x, y, obj_player_1) ||
-	place_meeting(x - 1, y, obj_player_1) ||
-	place_meeting(x + 1, y, obj_player_1) ||
-	place_meeting(x, y - 1, obj_player_1) ||
-	place_meeting(x, y + 1, obj_player_1)
-
 if (!breaking) {
+	
+	var player_touching =
+		place_meeting(x, y, obj_player_1) ||
+		place_meeting(x - 10, y, obj_player_1) ||
+		place_meeting(x + 10, y, obj_player_1) ||
+		place_meeting(x, y - 10, obj_player_1) ||
+		place_meeting(x, y + 10, obj_player_1)
+	
+	if player_touching{show_debug_message("player is touching a breakable")}
+
 	
 	if (!obj_pause_manager.paused) {
 		
 		if (player_touching) {
 			
-			if (keyboard_check_pressed(ord("E"))) {
+			if (obj_player_1.sprite_index == spr_player_power_swing) {
 				
 				breaking = true
 				break_timer = break_delay

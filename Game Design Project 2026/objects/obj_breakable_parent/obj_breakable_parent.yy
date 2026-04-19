@@ -9,8 +9,8 @@
   "name":"obj_breakable_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Terrain",
+    "path":"folders/Objects/Terrain.yy",
   },
   "parentObjectId":{
     "name":"abstract_block",
