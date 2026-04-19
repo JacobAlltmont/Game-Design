@@ -35,18 +35,6 @@ if (state == PLAYERSTATE.ATTACK) {
 	
 }
 
-// shoot bullet
-//if (mouse_check_button_pressed(mb_left)) {
-//    var bullet = instance_create_layer(x, y, "Instances", obj_bullet_player);
-//    show_debug_message("SHOOTING!");
-//   if (image_xscale > 0) {
-//           bullet.direction = 0;
-//       } else {
-//           bullet.direction = 180;
-//       }
-//}
-
-
 gravD = obj_control.gravityDirection
 gravM = obj_control.gravityMagnitude
 
@@ -57,7 +45,7 @@ inputs = [
 	keyboard_check(vk_right) or keyboard_check(ord("D")),	//1: right
 	keyboard_check(vk_up) or keyboard_check(ord("W")),		//2: up
 	keyboard_check(vk_down) or keyboard_check(ord("S")),	//3: down
-	keyboard_check(vk_space)								//4: jump (zero g only)
+	keyboard_check(vk_space)								//4: jump
 ]
 
 if (gravD.x == 0 and gravD.y == 0){ // zero gravity
@@ -114,8 +102,8 @@ if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 		}
 		//image_angle = dir.angleDegrees(new Vector2(0,-1))
 	}
-}else{ // normal gravity
-	jumpIdx = -1
+}
+else{ // normal gravity
 	
 	// move the player horixontally (relative to the gravity)
 	// determine which input should be jump
@@ -124,24 +112,16 @@ if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 		dir.x = (inputs[1] ? 1 : 0) - (inputs[0] ? 1 : 0) //move horizontally 
 		if gravD.y == 1 { // down
 			image_angle = 0
-			jumpIdx = 2
 		}else if gravD.y == -1 { // up
 			image_angle = 180
-			jumpIdx = 3
 		}
 	} else if gravD.y == 0 { // if gravity is horizontal
 		dir.y = (inputs[3] ? 1 : 0) - (inputs[2] ? 1 : 0) //move vertically
 		if gravD.x == 1 { // right
 			image_angle = 90
-			jumpIdx = 0
 		}else if gravD.x == -1 { // left
 			image_angle = 270
-			jumpIdx = 1
 		}
-	}
-	if jumpIdx < 0 {
-		throw "Error: Gravity Direction " + gravD.toString() + " is invalid"
-		return
 	}
 	
 	// make the player face the direction they are going
@@ -168,7 +148,7 @@ if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 			 }
 		}
 		// make the player jump
-		if (inputs[jumpIdx]){ //jump up
+		if (inputs[4]){ //jump up
 			dir.iadd(gravD.mul(-jumpSpeed))
 			sprite_index = spr_player_jump
 		}

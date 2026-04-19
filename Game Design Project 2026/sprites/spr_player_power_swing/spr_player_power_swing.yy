@@ -1,10 +1,10 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_player_power_swing",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":99,
   "bbox_left":29,
-  "bbox_right":97,
+  "bbox_right":70,
   "bbox_top":41,
   "collisionKind":1,
   "collisionTolerance":0,
