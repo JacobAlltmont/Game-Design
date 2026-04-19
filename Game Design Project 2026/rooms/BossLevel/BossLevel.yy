@@ -13,10 +13,6 @@
     {"name":"inst_50038C34","path":"rooms/BossLevel/BossLevel.yy",},
     {"name":"inst_10D31E0B","path":"rooms/BossLevel/BossLevel.yy",},
     {"name":"inst_7FD62C38","path":"rooms/BossLevel/BossLevel.yy",},
-    {"name":"inst_680A4596","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_67D2726","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_7DDA9CF1","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_71FBA922","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[
