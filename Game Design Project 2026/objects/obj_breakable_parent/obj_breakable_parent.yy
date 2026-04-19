@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_breakable_v",
-  "eventList":[],
+  "%Name":"obj_breakable_parent",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_breakable_v",
+  "name":"obj_breakable_parent",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_breakable_parent",
-    "path":"objects/obj_breakable_parent/obj_breakable_parent.yy",
+    "name":"abstract_block",
+    "path":"objects/abstract_block/abstract_block.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -30,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_breakable_v",
-    "path":"sprites/spr_breakable_v/spr_breakable_v.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

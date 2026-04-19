@@ -39,6 +39,7 @@
     {"id":{"name":"obj_boss_hurtbox","path":"objects/obj_boss_hurtbox/obj_boss_hurtbox.yy",},},
     {"id":{"name":"obj_boss","path":"objects/obj_boss/obj_boss.yy",},},
     {"id":{"name":"obj_breakable_h","path":"objects/obj_breakable_h/obj_breakable_h.yy",},},
+    {"id":{"name":"obj_breakable_parent","path":"objects/obj_breakable_parent/obj_breakable_parent.yy",},},
     {"id":{"name":"obj_breakable_v","path":"objects/obj_breakable_v/obj_breakable_v.yy",},},
     {"id":{"name":"obj_bullet_enemy","path":"objects/obj_bullet_enemy/obj_bullet_enemy.yy",},},
     {"id":{"name":"obj_bullet_player","path":"objects/obj_bullet_player/obj_bullet_player.yy",},},
