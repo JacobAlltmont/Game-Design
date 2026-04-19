@@ -3,7 +3,7 @@ function BossState_Idle(){
 	hsp = 0
 	sprite_index = spr_boss_idle
 
-	var _player = instance_nearest(x, y, obj_player_1)
+	var _player = instance_nearest(x, y, obj_player)
 	
 	if (_player != noone) {
 		

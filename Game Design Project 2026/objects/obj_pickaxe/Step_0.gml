@@ -5,7 +5,7 @@ if (!picked_up) {
 	
 	if (!obj_pause_manager.paused) {
 		
-		if (place_meeting(x, y, obj_player_1)) {
+		if (place_meeting(x, y, obj_player)) {
 			
 			show_prompt = true
 			
