@@ -8,6 +8,7 @@ update_pause = function() {
 	layer_set_visible("PauseLayer", false)
 	layer_set_visible("NoteLayer", false)
 	layer_set_visible("PickaxeLayer", false)
+	layer_set_visible("CrateLayer", false)
 	
 	if (paused) {
 		
@@ -41,6 +42,14 @@ open_note = function() {
 open_pickaxe = function() {
 	
 	layer_name = "PickaxeLayer"
+	paused = true
+	update_pause()
+	
+}
+
+open_crate = function() {
+	
+	layer_name = "CrateLayer"
 	paused = true
 	update_pause()
 	
