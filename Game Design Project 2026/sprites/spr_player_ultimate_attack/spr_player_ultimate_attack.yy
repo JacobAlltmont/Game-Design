@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_player_ultimate_attack",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":99,
   "bbox_left":18,
   "bbox_right":84,

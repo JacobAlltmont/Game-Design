@@ -4,10 +4,19 @@
 dir = new Vector2(0,0)
 spd = 1 // speed constant
 collisionBlocks = [abstract_block,layer_tilemap_get_id(layer_get_id("Ground"))]
-directions = pointer_null
+directions = [
+	new Vector2(-1,0),	//left
+	new Vector2(1,0),	//right
+	new Vector2(0,-1),	//up
+	new Vector2(0,1)	//down
+]
 inputs = pointer_null
 
 isPlayer = true
+
+scale = 1
+image_xscale = scale
+image_yscale = scale
 
 //facing_right = true
 

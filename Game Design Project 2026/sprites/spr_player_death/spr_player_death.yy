@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_player_death",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":99,
   "bbox_left":21,
   "bbox_right":83,

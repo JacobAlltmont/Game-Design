@@ -1,7 +1,6 @@
 // @description move the player based on input
 
 getInput = function(v){
-	if directions == pointer_null return false
 	if inputs == pointer_null return false
 	for (var i = 0; i < 4; i++){
 		if directions[i].equals(v) return inputs[i]
@@ -10,15 +9,15 @@ getInput = function(v){
 }
 
 // shoot bullet
-if (mouse_check_button_pressed(mb_left)) {
-    var bullet = instance_create_layer(x, y, "Instances", obj_bullet_player);
-    show_debug_message("SHOOTING!");
-   if (image_xscale > 0) {
-           bullet.direction = 0;
-       } else {
-           bullet.direction = 180;
-       }
-}
+//if (mouse_check_button_pressed(mb_left)) {
+//    var bullet = instance_create_layer(x, y, "Instances", obj_bullet_player);
+//    show_debug_message("SHOOTING!");
+//   if (image_xscale > 0) {
+//           bullet.direction = 0;
+//       } else {
+//           bullet.direction = 180;
+//       }
+//}
 
 
 gravD = obj_control.gravityDirection
@@ -33,14 +32,6 @@ inputs = [
 	keyboard_check(vk_down) or keyboard_check(ord("S")),	//3: down
 	keyboard_check(vk_space)								//4: jump (zero g only)
 ]
-if directions == pointer_null {
-	directions = [
-		new Vector2(-1,0),	//left
-		new Vector2(1,0),	//right
-		new Vector2(0,-1),	//up
-		new Vector2(0,1)	//down
-	]
-}
 
 if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 	// if you are touching a surface, you can jump  away from the surface
@@ -129,7 +120,7 @@ if (gravD.x == 0 and gravD.y == 0){ // zero gravity
 	// make the player face the direction they are going
 	var result = dir.cross(gravD)
 	if result != 0 {
-		image_xscale = result
+		image_xscale = result * scale
 	}
 
 	//jump
@@ -183,9 +174,9 @@ if (place_meeting(x, y, obj_ladder)) {
     if (gravD.x != 0) dir.x = 0;
     
     // vertical movement
-    if (keyboard_check(vk_up)) {
+    if inputs[2] {
         dir.y -= 3;
-    } else if (keyboard_check(vk_down)) {
+    } else if inputs[3] {
         dir.y += 3;
     }
 }
@@ -193,14 +184,28 @@ if (place_meeting(x, y, obj_ladder)) {
 //move player
 move_and_collide(dir.x,dir.y,collisionBlocks)
 
+//check if the hitbox is clipping at all, and if it is, move it out
+var tempDir
+for (var i = 0; i < 4; i++){
+	tempDir = directions[i]
+	//if the player is in the wall, move it away one pixel at a time
+	while place_meeting(x + tempDir.x, y + tempDir.y, collisionBlocks){
+		x -= tempDir.x
+		y -= tempDir.y
+	}
+	//move it back one so it is against the wall (but not in it)
+	x += tempDir.x
+	y += tempDir.y
+}
+
 //Placeholder until we figure out when and where the game ends
 if hp > 0 {
 	global.score += .001
 	if global.gem_multiplier == 0{
-		global.gem_multiplier +=1
+		global.gem_multiplier += 1
 	} else {
 		global.gem_multiplier = global.gems_collected
 	}
 	
-	show_debug_message(global.score*global.gem_multiplier);
+	//show_debug_message(global.score*global.gem_multiplier);
 }
