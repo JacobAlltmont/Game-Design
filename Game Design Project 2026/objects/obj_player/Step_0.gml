@@ -182,9 +182,10 @@ if (place_meeting(x, y, obj_ladder)) {
     
     // vertical movement
     if inputs[2] {
-        dir.y -= 3;
-    } else if inputs[3] {
-        dir.y += 3;
+        dir.y -= 1;
+    }
+	if inputs[3] {
+        dir.y += 1;
     }
 }
 
@@ -206,10 +207,10 @@ for (var i = 0; i < 4; i++){
 }
 
 //if player off screen, kill player and reset
-if	(x > room_width + sprite_width) ||
-	(x < -sprite_width) ||
-	(y > room_height + sprite_height) ||
-	(y < - sprite_height) {
+if	(x > room_width + abs(sprite_width)) ||
+	(x < -abs(sprite_width)) ||
+	(y > room_height + abs(sprite_height)) ||
+	(y < -abs(sprite_height)) {
 		x = spawn.x
 		y = spawn.y
 		global.deaths++
@@ -217,7 +218,7 @@ if	(x > room_width + sprite_width) ||
 		hp = basehp
 		powerSwingCooldown = 0
 		ultimateAttackCooldown = 0
-}
+	}
 
 //Placeholder until we figure out when and where the game ends
 if hp > 0 {

@@ -8,9 +8,6 @@ if (!breaking) {
 		place_meeting(x, y - 10, obj_player) ||
 		place_meeting(x, y + 10, obj_player)
 	
-	if player_touching{show_debug_message("player is touching a breakable")}
-
-	
 	if (!obj_pause_manager.paused) {
 		
 		if (player_touching) {

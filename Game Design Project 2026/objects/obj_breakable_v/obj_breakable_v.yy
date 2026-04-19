@@ -10,8 +10,8 @@
     "path":"folders/Objects/Terrain.yy",
   },
   "parentObjectId":{
-    "name":"obj_breakable_parent",
-    "path":"objects/obj_breakable_parent/obj_breakable_parent.yy",
+    "name":"abstract_breakable",
+    "path":"objects/abstract_breakable/abstract_breakable.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

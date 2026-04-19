@@ -43,11 +43,11 @@
   "resources":[
     {"id":{"name":"fnt_ui","path":"fonts/fnt_ui/fnt_ui.yy",},},
     {"id":{"name":"abstract_block","path":"objects/abstract_block/abstract_block.yy",},},
+    {"id":{"name":"abstract_breakable","path":"objects/abstract_breakable/abstract_breakable.yy",},},
     {"id":{"name":"abstract_enemy","path":"objects/abstract_enemy/abstract_enemy.yy",},},
     {"id":{"name":"obj_boss_hurtbox","path":"objects/obj_boss_hurtbox/obj_boss_hurtbox.yy",},},
     {"id":{"name":"obj_boss","path":"objects/obj_boss/obj_boss.yy",},},
     {"id":{"name":"obj_breakable_h","path":"objects/obj_breakable_h/obj_breakable_h.yy",},},
-    {"id":{"name":"obj_breakable_parent","path":"objects/obj_breakable_parent/obj_breakable_parent.yy",},},
     {"id":{"name":"obj_breakable_v","path":"objects/obj_breakable_v/obj_breakable_v.yy",},},
     {"id":{"name":"obj_bullet_enemy","path":"objects/obj_bullet_enemy/obj_bullet_enemy.yy",},},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},

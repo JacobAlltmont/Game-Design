@@ -9,11 +9,11 @@
   ],
   "ResourceOrderSettings":[
     {"name":"abstract_block","order":1,"path":"objects/abstract_block/abstract_block.yy",},
+    {"name":"abstract_breakable","order":5,"path":"objects/abstract_breakable/abstract_breakable.yy",},
     {"name":"abstract_enemy","order":1,"path":"objects/abstract_enemy/abstract_enemy.yy",},
     {"name":"obj_boss_hurtbox","order":4,"path":"objects/obj_boss_hurtbox/obj_boss_hurtbox.yy",},
     {"name":"obj_boss","order":3,"path":"objects/obj_boss/obj_boss.yy",},
     {"name":"obj_breakable_h","order":3,"path":"objects/obj_breakable_h/obj_breakable_h.yy",},
-    {"name":"obj_breakable_parent","order":5,"path":"objects/obj_breakable_parent/obj_breakable_parent.yy",},
     {"name":"obj_breakable_v","order":4,"path":"objects/obj_breakable_v/obj_breakable_v.yy",},
     {"name":"obj_bullet_enemy","order":5,"path":"objects/obj_bullet_enemy/obj_bullet_enemy.yy",},
     {"name":"obj_crate","order":2,"path":"objects/obj_crate/obj_crate.yy",},

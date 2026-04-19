@@ -1,5 +1,7 @@
 /// @description Initialize enemy
 
+event_inherited()
+
 // Vector
 dir = new Vector2(0,0);
 spd = 1; 
@@ -13,25 +15,11 @@ directions = [
     new Vector2(-1, 0)  // 3: Left
 ];
 
-move_dir = 1;        
+move_dir = -1;        
 hp = 10          
 dmg = 1;
+reverseRate = 20
+reverseCooldown = reverseRate
+hitRate = 1 * game_get_speed(gamespeed_fps)
+hitCooldown = 0
 can_move = true;  
-
-damage_player = function(obj,amount){
-	if(obj == obj_player){
-		take_damage(obj,amount)
-		
-	}
-}
-
-take_damage = function(obj,amount) {
-	if (variable_instance_exists(obj, obj.hp)) {
-		obj.hp -= amount
-		show_debug_message("player damage")
-		show_debug_message(other.hp)
-		if(obj.hp <= 0){
-			obj.instance_destroy(true)
-		}
-	}
-}

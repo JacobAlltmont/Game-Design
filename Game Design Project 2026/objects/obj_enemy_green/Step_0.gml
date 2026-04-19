@@ -1,31 +1,45 @@
+
+reverseCooldown--
+hitCooldown--
+
 gravD = obj_control.gravityDirection;
 gravM = obj_control.gravityMagnitude;
 
-var move_x = 0;
-var move_y = 0;
+dir = new Vector2(0,0)
 
 if (gravD.x == 0) { 
     // Vertical Gravity
-    move_x = move_dir;
+    dir.x = move_dir;
 } else if (gravD.y == 0) { 
     // Horizontal Gravity
-    move_y = move_dir;
+    dir.y = move_dir;
 }
 
-var collision_check = (move_dir == 1) ? bbox_right : bbox_left;
+
+//var collision_check = (move_dir == 1) ? bbox_right : bbox_left;
 
 // wall collision 
-if (place_meeting(collision_check + move_dir, y , collisionBlocks)) {
-    move_dir *= -1; 
-}
 
-dir.x = move_x;
-dir.y = move_y;
+var temp = dir.mul(5)
+if ((place_meeting(x + temp.x, y + temp.y, collisionBlocks)) ||  // if it runs into a wall
+	(!place_meeting(x + temp.x + gravD.x, y + temp.y + gravD.y, collisionBlocks))) && // or it finds a cliff
+	reverseCooldown <= 0 { //and it can switch
+		reverseCooldown = reverseRate
+		//show_debug_message(new Vector2(x,y).toString())
+		//show_debug_message(dir.toString())
+		move_dir *= -1;
+		dir.imul(-1)
+}
 
 // animation
 var result = dir.cross(gravD);
 if (result != 0) {
-    image_xscale = result;
+    image_xscale = sign(result);
+}
+
+while place_meeting(x - dir.x, y - dir.y, collisionBlocks){
+	x += dir.x
+	y += dir.y
 }
 
 if (dir.x != 0 || dir.y != 0) {
@@ -42,7 +56,8 @@ if hp <= 0{
 
 
 dir.imul(spd);
-dir.iadd(gravD.mul(0.1 * gravM)); 
+dir.iadd(gravD.mul(gravM)); 
 
 
 move_and_collide(dir.x, dir.y, collisionBlocks);
+
