@@ -140,6 +140,7 @@
     {"roomId":{"name":"BossLevel","path":"rooms/BossLevel/BossLevel.yy",},},
     {"roomId":{"name":"Test2","path":"rooms/Test2/Test2.yy",},},
     {"roomId":{"name":"Level_2","path":"rooms/Level_2/Level_2.yy",},},
+    {"roomId":{"name":"Test2","path":"rooms/Test2/Test2.yy",},},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"Hallway","path":"rooms/Hallway/Hallway.yy",},},
     {"roomId":{"name":"Level_1","path":"rooms/Level_1/Level_1.yy",},},
