@@ -197,7 +197,8 @@ var tempDir
 for (var i = 0; i < 4; i++){
 	tempDir = directions[i]
 	//if the player is in the wall, move it away one pixel at a time
-	while place_meeting(x + tempDir.x, y + tempDir.y, collisionBlocks){
+	while place_meeting(x + tempDir.x, y + tempDir.y, collisionBlocks)
+		and !place_meeting(x - tempDir.x, y - tempDir.y, collisionBlocks) {
 		x -= tempDir.x
 		y -= tempDir.y
 	}
