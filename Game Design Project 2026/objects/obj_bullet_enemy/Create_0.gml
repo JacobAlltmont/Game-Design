@@ -1,3 +1,6 @@
+var lay_id = layer_get_id("Ground"); 
+tilemap = layer_tilemap_get_id(lay_id);
+
 damage_player = function(obj,amount){
 	if(obj == obj_player){
 		take_damage(obj,amount)

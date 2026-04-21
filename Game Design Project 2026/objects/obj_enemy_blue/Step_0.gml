@@ -20,7 +20,7 @@ if (instance_exists(p) and can_shoot)	{
 	        motion_set(dir, spd);
 	        //bullet_color = other.enemy_color;
 	    }
-		can_shoot = true
-		alarm[0] = 10
+		can_shoot = false
+		alarm[0] = 300
 
 }
