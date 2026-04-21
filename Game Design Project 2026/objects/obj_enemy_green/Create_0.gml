@@ -16,7 +16,7 @@ directions = [
 ];
 
 move_dir = -1;        
-hp = 1          
+hp = 2          
 dmg = 1;
 reverseRate = 20
 reverseCooldown = reverseRate

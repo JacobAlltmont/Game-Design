@@ -16,7 +16,7 @@ if (instance_exists(p) and can_shoot and distance <= 300)	{
 	var spd = 2;
 
 	b = instance_create_layer(x, y, "Instances", obj_bullet_enemy);
-	show_debug_message("bullet made")
+	//show_debug_message("bullet made")
 	with (b)
 	{
 	    motion_set(dir, spd);

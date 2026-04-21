@@ -66,6 +66,7 @@ function PlayerState_Attack(){
 				if instance_exists(enemy) and enemy.object_index == obj_boss { // boss
 					BossHit(enemy, _damage)
 				} else if instance_exists(enemy) and enemy.object_index != obj_player { 
+					//show_debug_message("hitting enemy")
 					enemy.take_damage(_damage)
 				}
 					
