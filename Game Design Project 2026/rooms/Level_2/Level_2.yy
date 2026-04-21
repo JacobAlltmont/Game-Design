@@ -14,12 +14,6 @@
     {"name":"inst_53DC1443","path":"rooms/Level_2/Level_2.yy",},
     {"name":"inst_2137790D","path":"rooms/Level_2/Level_2.yy",},
     {"name":"inst_BEB96BF","path":"rooms/Level_2/Level_2.yy",},
-    {"name":"inst_680A4596","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_67D2726","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_7DDA9CF1","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_71FBA922","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_43C9B5A","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_4D1D0BEB","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[

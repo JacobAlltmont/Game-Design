@@ -1,6 +1,6 @@
 /// @description TEST CODE
 
-test = true //usually want this to be false
+test = false //usually want this to be false
 
 if test {
 	if keyboard_check(ord("I")){ // sets gravity to down

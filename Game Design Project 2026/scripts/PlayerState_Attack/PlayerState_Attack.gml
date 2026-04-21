@@ -37,6 +37,9 @@ function PlayerState_Attack(){
 	mask_index = _attackMask
 	var hitByAttackNow = ds_list_create()
 	var hits = instance_place_list(x, y, obj_boss_hurtbox, hitByAttackNow, false)
+	//
+	hits += instance_place_list(x,y,abstract_enemy, hitByAttackNow, false)
+	//
 	if (hits > 0) {
 		
 		for (var i = 0; i < hits; i++) {
@@ -46,16 +49,28 @@ function PlayerState_Attack(){
 				
 				ds_list_add(hitByAttack, hitID)
 				
-				var bossID = hitID.owner
+				//var bossID = hitID.owner
 
-				if (instance_exists(bossID)) {
+				//if (instance_exists(bossID)) {
 					
-					BossHit(bossID, _damage)
+				//	BossHit(bossID, _damage)
 					
+				//}
+				
+				var enemy = hitID
+				
+				if variable_instance_exists(hitID,"owner") {
+					enemy = hitID.owner
 				}
-				
+
+				if instance_exists(enemy) and enemy.object_index == obj_boss { // boss
+					BossHit(enemy, _damage)
+				} else if instance_exists(enemy) and enemy.object_index != obj_player { 
+					enemy.take_damage(_damage)
+				}
+					
 			}
-				
+			
 		}
 		
 	}

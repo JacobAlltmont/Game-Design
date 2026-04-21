@@ -4,7 +4,7 @@ event_inherited()
 
 // Vector
 dir = new Vector2(0,0);
-spd = 1; 
+spd = 0.5; 
 collisionBlocks = [abstract_block, layer_tilemap_get_id(layer_get_id("Ground"))];
 
 
@@ -16,7 +16,7 @@ directions = [
 ];
 
 move_dir = -1;        
-hp = 10          
+hp = 1          
 dmg = 1;
 reverseRate = 20
 reverseCooldown = reverseRate

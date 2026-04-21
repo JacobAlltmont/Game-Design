@@ -1,27 +1,11 @@
 /// @description declare damage_player function
 
-event_inherited()
 
 hp = 1
-can_shoot = true
 
-/// @function damage_player(obj,amount);
-/// @description damages obj by amount
-/// @param {Asset.GMObject} obj the object which will be damaged
-/// @param {Real} amount the amount of hp which will be lost
-damage_player = function(obj,amount){
-	if(obj == obj_player){
-		take_damage(obj,amount)
-	}
-}
-
-take_damage = function(obj,amount) {
-	if (variable_instance_exists(obj, obj.hp)) {
-		obj.hp -= amount
-		show_debug_message("player damage")
-		show_debug_message(other.hp)
-		if(obj.hp <= 0){
-			obj.instance_destroy(true)
-		}
+take_damage = function(amount) {
+	hp -= amount
+	if(hp <= 0){
+		instance_destroy(true)
 	}
 }
