@@ -1,8 +1,8 @@
 {
   "FolderOrderSettings":[
     {"name":"UI","order":17,"path":"folders/Objects/UI.yy",},
-    {"name":"Other","order":22,"path":"folders/Sprites/Other.yy",},
     {"name":"Interactables","order":21,"path":"folders/Sprites/Interactables.yy",},
+    {"name":"Other","order":22,"path":"folders/Sprites/Other.yy",},
     {"name":"spr_boss","order":10,"path":"folders/Sprites/spr_boss.yy",},
     {"name":"spr_player","order":3,"path":"folders/Sprites/spr_player.yy",},
     {"name":"Terrain","order":19,"path":"folders/Sprites/Terrain.yy",},

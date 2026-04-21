@@ -26,21 +26,19 @@
     {"name":"inst_632AFFFF","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_4CF8075D","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_A581D2E","path":"rooms/Tutorial/Tutorial.yy",},
-    {"name":"inst_26015F4E","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_7C921A2D","path":"rooms/Tutorial/Tutorial.yy",},
+    {"name":"inst_4EA6B7D9","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_680A4596","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_67D2726","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_7DDA9CF1","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_71FBA922","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_43C9B5A","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_4D1D0BEB","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_4EA6B7D9","path":"rooms/Tutorial/Tutorial.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Player","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_A581D2E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_A581D2E","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":76.0,"y":652.0,},
-        {"$GMRInstance":"v4","%Name":"inst_26015F4E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_26015F4E","objectId":{"name":"obj_enemy_blue","path":"objects/obj_enemy_blue/obj_enemy_blue.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":608.0,"y":480.0,},
         {"$GMRInstance":"v4","%Name":"inst_7C921A2D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7C921A2D","objectId":{"name":"obj_enemy_blue","path":"objects/obj_enemy_blue/obj_enemy_blue.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1088.0,"y":160.0,},
       ],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
@@ -63,7 +61,7 @@
         {"$GMRInstance":"v4","%Name":"inst_4115EA2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4115EA2","objectId":{"name":"obj_pause_manager","path":"objects/obj_pause_manager/obj_pause_manager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1227.0,"y":175.0,},
         {"$GMRInstance":"v4","%Name":"inst_632AFFFF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_632AFFFF","objectId":{"name":"obj_goal","path":"objects/obj_goal/obj_goal.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1344.0,"y":32.0,},
         {"$GMRInstance":"v4","%Name":"inst_4CF8075D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4CF8075D","objectId":{"name":"obj_note_pickaxe","path":"objects/obj_note_pickaxe/obj_note_pickaxe.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":994.0,"y":528.0,},
-        {"$GMRInstance":"v4","%Name":"inst_4EA6B7D9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4EA6B7D9","objectId":{"name":"obj_enemy_green","path":"objects/obj_enemy_green/obj_enemy_green.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":288.0,"y":672.0,},
+        {"$GMRInstance":"v4","%Name":"inst_4EA6B7D9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4EA6B7D9","objectId":{"name":"obj_enemy_green","path":"objects/obj_enemy_green/obj_enemy_green.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1235.0,"y":729.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Accent1","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Accent1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":48,"SerialiseWidth":86,"TileCompressedData":[
           -2,-2147483648,6,282,283,284,285,286,287,-80,-2147483648,6,309,310,311,312,313,314,-80,-2147483648,6,
