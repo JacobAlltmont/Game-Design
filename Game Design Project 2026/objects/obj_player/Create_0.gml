@@ -15,7 +15,7 @@ inputs = pointer_null
 
 isPlayer = true
 
-scale = 0.75
+scale = 1
 image_xscale = scale
 image_yscale = scale
 
