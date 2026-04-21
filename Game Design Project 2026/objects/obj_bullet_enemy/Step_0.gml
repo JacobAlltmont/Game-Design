@@ -1,3 +1,4 @@
-if (tilemap_get_at_pixel(tilemap, x, y)) {
-    instance_destroy();
+
+if place_meeting(x,y,obj_player.collisionBlocks) {
+	instance_destroy()
 }

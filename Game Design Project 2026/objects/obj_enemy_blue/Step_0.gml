@@ -10,7 +10,6 @@ if (instance_exists(p)) {
 }
 
 var distance = new Vector2(obj_player.x - x, obj_player.y - y).length()
-show_debug_message(distance)
 
 if (instance_exists(p) and can_shoot and distance <= 300)	{
 	var dir = point_direction(x, y, p.x, p.y);
