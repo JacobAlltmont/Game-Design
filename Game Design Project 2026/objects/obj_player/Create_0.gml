@@ -25,14 +25,29 @@ if(instance_number(obj_player) > 1){
 	throw ("Error (obj_player.Create): an instance of obj_player was created when one already existed")
 }
 
-/// @function damage_enemy(obj,amount);
-/// @description damages obj by amount
-/// @param {Asset.GMObject} obj the object which will be damaged
+/// @function take_damage(amount);
+/// @description damages the player by amount
 /// @param {Real} amount the amount of hp which will be lost
-damage_player = function(obj,amount){
-	if(obj == abstract_enemy){
-		take_damage(obj,amount)
+take_damage = function(amount){
+	hp -= amount
+	if hp <= 0 {
+		reset(true)
 	}
+}
+
+/// @function reset(died);
+/// @description resets the player after a death, but doesn't full reset the level
+/// @param {Bool} died whether or not to add to the global death count
+reset = function(died){
+	x = spawn.x
+	y = spawn.y
+	if died {
+		global.deaths++
+	}
+	dir = new Vector2(0,0)
+	hp = basehp
+	powerSwingCooldown = 0
+	ultimateAttackCooldown = 0
 }
 
 basehp = 100

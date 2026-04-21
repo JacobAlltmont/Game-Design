@@ -211,13 +211,7 @@ if	(x > room_width + abs(sprite_width)) ||
 	(x < -abs(sprite_width)) ||
 	(y > room_height + abs(sprite_height)) ||
 	(y < -abs(sprite_height)) {
-		x = spawn.x
-		y = spawn.y
-		global.deaths++
-		dir = new Vector2(0,0)
-		hp = basehp
-		powerSwingCooldown = 0
-		ultimateAttackCooldown = 0
+		reset()
 	}
 
 //Placeholder until we figure out when and where the game ends
