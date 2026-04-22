@@ -4,7 +4,7 @@ vsp = 0
 spd = 2
 grv = 0.5
 
-hp = 1
+hp = 40
 
 hurtFlashTimer = 0
 attackCooldown = 45
