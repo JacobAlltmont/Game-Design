@@ -27,6 +27,7 @@
     {"name":"obj_pickaxe","order":6,"path":"objects/obj_pickaxe/obj_pickaxe.yy",},
     {"name":"obj_player_hurtbox","order":2,"path":"objects/obj_player_hurtbox/obj_player_hurtbox.yy",},
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
+    {"name":"obj_victory_screen","order":3,"path":"objects/obj_victory_screen/obj_victory_screen.yy",},
     {"name":"BossLevel","order":2,"path":"rooms/BossLevel/BossLevel.yy",},
     {"name":"Tutorial","order":1,"path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"RoomUI","order":1,"path":"roomui/RoomUI/RoomUI.yy",},

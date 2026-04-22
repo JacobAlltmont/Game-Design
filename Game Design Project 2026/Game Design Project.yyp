@@ -65,6 +65,7 @@
     {"id":{"name":"obj_player_hurtbox","path":"objects/obj_player_hurtbox/obj_player_hurtbox.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_test_block","path":"objects/obj_test_block/obj_test_block.yy",},},
+    {"id":{"name":"obj_victory_screen","path":"objects/obj_victory_screen/obj_victory_screen.yy",},},
     {"id":{"name":"A_level","path":"rooms/A_level/A_level.yy",},},
     {"id":{"name":"B_level","path":"rooms/B_level/B_level.yy",},},
     {"id":{"name":"BossLevel","path":"rooms/BossLevel/BossLevel.yy",},},

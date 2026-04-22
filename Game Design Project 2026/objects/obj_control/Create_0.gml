@@ -11,7 +11,7 @@ global.gem_multiplier = global.gems_collected - global.deaths_decrease
 
 
 function calculate_score(){
-	if global.boss_death = true {
+	if (global.boss_death == true) {
 		global.final_score = global.score * global.gem_multiplier
 	}
 }
