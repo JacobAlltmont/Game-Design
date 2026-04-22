@@ -28,12 +28,6 @@
     {"name":"inst_A581D2E","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_7C921A2D","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_4EA6B7D9","path":"rooms/Tutorial/Tutorial.yy",},
-    {"name":"inst_680A4596","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_67D2726","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_7DDA9CF1","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_71FBA922","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_43C9B5A","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_4D1D0BEB","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[

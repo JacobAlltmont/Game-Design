@@ -6,6 +6,7 @@ layer_name = "PauseLayer"
 update_pause = function() {
 	
 	layer_set_visible("PauseLayer", false)
+	layer_set_visible("TutorialLayer", false)
 	layer_set_visible("NoteLayer", false)
 	layer_set_visible("PickaxeLayer", false)
 	layer_set_visible("CrateLayer", false)
@@ -26,6 +27,14 @@ update_pause = function() {
 open_pause = function() {
 	
 	layer_name = "PauseLayer"
+	paused = true
+	update_pause()
+	
+}
+
+open_tutorial = function() {
+	
+	layer_name = "TutorialLayer"
 	paused = true
 	update_pause()
 	
