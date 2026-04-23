@@ -9,6 +9,9 @@ useStamina = true
 staminaLimit = 5 * game_get_speed(gamespeed_fps)
 stamina = staminaLimit
 
+basehp = 10
+hp = basehp //placeholder
+
 scale = 1
 image_xscale = scale
 image_yscale = scale
@@ -36,7 +39,8 @@ if(instance_number(obj_player) > 1){
 take_damage = function(amount){
 	hp -= amount
 	if hp <= 0 {
-		reset(true)
+		sprite_index = spr_player_death
+		show_debug_message("player was killed")
 	}
 }
 
@@ -46,6 +50,7 @@ take_damage = function(amount){
 reset = function(died){
 	x = spawn.x
 	y = spawn.y
+	sprite_index = spr_player_idle
 	if died {
 		global.deaths++
 	}
@@ -55,8 +60,6 @@ reset = function(died){
 	ultimateAttackCooldown = 0
 }
 
-basehp = 100
-hp = basehp //placeholder
 
 hurtFlashTimer = 0
 
