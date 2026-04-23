@@ -173,19 +173,20 @@ else{ // normal gravity
 dir.iadd(gravD.mul(0.1 * gravM))
 
 //handle stamina
-stamina = min(stamina,staminaLimit)
-if inputs[5] and (dir.cross(gravD) != 0) { // if you are trying to sprint
-	if stamina <= 0 { //cannot sprint
-		inputs[5] = false
-		stamina = 0
-	} else { //trying to sprint and can sprint
-		stamina -= 1
+if useStamina {
+	stamina = min(stamina,staminaLimit)
+	if inputs[5] and (dir.cross(gravD) != 0) { // if you are trying to sprint
+		if stamina <= 0 { //cannot sprint
+			inputs[5] = false
+			stamina = 0
+		} else { //trying to sprint and can sprint
+			stamina -= 1
+		}
+	} else { // if you are not trying to sprint, recover stamina
+		stamina += 0.5 //recover at half the rate
 	}
-} else { // if you are not trying to sprint, recover stamina
-	stamina += 0.5 //recover at half the rate
+	show_debug_message("stamina = " + string(stamina))
 }
-
-show_debug_message("stamina = " + string(stamina))
 
 // ladder climbing 
 if (place_meeting(x, y, obj_ladder)) {

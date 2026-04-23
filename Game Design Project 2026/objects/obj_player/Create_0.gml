@@ -5,7 +5,8 @@ spawn = new Vector2(x,y)
 dir = new Vector2(0,0)
 spd = 1 // speed constant
 sprintMultiplier = 2
-staminaLimit = 3 * game_get_speed(gamespeed_fps)
+useStamina = true
+staminaLimit = 5 * game_get_speed(gamespeed_fps)
 stamina = staminaLimit
 
 scale = 1
