@@ -51,6 +51,7 @@ if (dir.x != 0 || dir.y != 0) {
 
 if hp <= 0{
 	instance_destroy(id, true)
+	global.score += 10
 }
 
 

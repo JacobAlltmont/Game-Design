@@ -217,7 +217,7 @@ if	(x > room_width + abs(sprite_width)) ||
 
 //Placeholder until we figure out when and where the game ends
 if hp > 0 {
-	global.score += .001
+	global.score -= .001
 	if global.gem_multiplier == 0{
 		global.gem_multiplier += 1
 	} else {

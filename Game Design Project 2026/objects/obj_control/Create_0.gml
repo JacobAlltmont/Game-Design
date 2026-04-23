@@ -1,6 +1,7 @@
 // @description creates damage function and sets gravity
 
-global.score = 0
+
+global.score = 1
 global.gems_collected = 0
 global.deaths = 0
 global.deaths_decrease = global.deaths / 2
@@ -9,6 +10,12 @@ global.final_score = 0
 global.gem_multiplier = global.gems_collected - global.deaths_decrease
 
 
+function calculate_in_game_score(){
+	if (global.score <= 0){
+		global.score = 0
+	}
+	
+}
 
 function calculate_score(){
 	if (global.boss_death == true) {

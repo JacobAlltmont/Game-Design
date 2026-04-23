@@ -15,3 +15,5 @@ if test {
 		gravityDirection = new Vector2(0,0)
 	}
 }
+
+calculate_in_game_score()
