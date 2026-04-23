@@ -45,7 +45,8 @@ inputs = [
 	keyboard_check(vk_right) or keyboard_check(ord("D")),	//1: right
 	keyboard_check(vk_up) or keyboard_check(ord("W")),		//2: up
 	keyboard_check(vk_down) or keyboard_check(ord("S")),	//3: down
-	keyboard_check(vk_space)								//4: jump
+	keyboard_check(vk_space),								//4: jump
+	keyboard_check(vk_lshift)								//5: left shift
 ]
 
 if (gravD.x == 0 and gravD.y == 0){ // zero gravity
@@ -168,10 +169,6 @@ else{ // normal gravity
 }
 
 
-
-//speed multiplier if we want to use it
-dir.imul(spd)
-
 // apply gravity
 dir.iadd(gravD.mul(0.1 * gravM))
 
@@ -182,15 +179,22 @@ if (place_meeting(x, y, obj_ladder)) {
     
     // vertical movement
     if inputs[2] {
-        dir.y -= 1;
+        dir.y -= spd * (inputs[5] ? sprintMultiplier : 1)
     }
 	if inputs[3] {
-        dir.y += 1;
+        dir.y += spd * (inputs[5] ? sprintMultiplier : 1)
     }
 }
 
+var move = dir.clone()
+if gravD.x == 0 {
+	move.x *= spd * (inputs[5] ? sprintMultiplier : 1)
+}else if gravD.y == 0 {
+	move.y *= spd * (inputs[5] ? sprintMultiplier : 1)
+}
+
 //move player
-move_and_collide(dir.x,dir.y,collisionBlocks)
+move_and_collide(move.x,move.y,collisionBlocks)
 
 //check if the hitbox is clipping at all, and if it is, move it out
 var tempDir

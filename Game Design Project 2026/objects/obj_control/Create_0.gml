@@ -17,7 +17,7 @@ function calculate_score(){
 }
 
 
-gravityMagnitude = 0.75
+gravityMagnitude = 0.7
 gravityDirection = new Vector2(0,1) // gravity going down by default
 
 window_set_size(1280, 720);	

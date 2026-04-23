@@ -4,6 +4,7 @@
 spawn = new Vector2(x,y)
 dir = new Vector2(0,0)
 spd = 1 // speed constant
+sprintMultiplier = 1.5
 collisionBlocks = [abstract_block,layer_tilemap_get_id(layer_get_id("Ground"))]
 directions = [
 	new Vector2(-1,0),	//left
