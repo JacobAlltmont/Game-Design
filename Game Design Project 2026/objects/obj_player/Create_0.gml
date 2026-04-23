@@ -4,7 +4,14 @@
 spawn = new Vector2(x,y)
 dir = new Vector2(0,0)
 spd = 1 // speed constant
-sprintMultiplier = 1.5
+sprintMultiplier = 2
+staminaLimit = 3 * game_get_speed(gamespeed_fps)
+stamina = staminaLimit
+
+scale = 1
+image_xscale = scale
+image_yscale = scale
+
 collisionBlocks = [abstract_block,layer_tilemap_get_id(layer_get_id("Ground"))]
 directions = [
 	new Vector2(-1,0),	//left
@@ -12,13 +19,9 @@ directions = [
 	new Vector2(0,-1),	//up
 	new Vector2(0,1)	//down
 ]
-inputs = pointer_null
+inputs = [false,false,false,false,false,false]
 
 isPlayer = true
-
-scale = 1
-image_xscale = scale
-image_yscale = scale
 
 //facing_right = true
 

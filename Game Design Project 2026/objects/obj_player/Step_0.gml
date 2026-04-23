@@ -38,7 +38,7 @@ if (state == PLAYERSTATE.ATTACK) {
 gravD = obj_control.gravityDirection
 gravM = obj_control.gravityMagnitude
 
-jumpSpeed = 2 / gravM
+jumpSpeed = 3
 
 inputs = [
 	keyboard_check(vk_left) or keyboard_check(ord("A")),	//0: left
@@ -172,6 +172,21 @@ else{ // normal gravity
 // apply gravity
 dir.iadd(gravD.mul(0.1 * gravM))
 
+//handle stamina
+stamina = min(stamina,staminaLimit)
+if inputs[5] and (dir.cross(gravD) != 0) { // if you are trying to sprint
+	if stamina <= 0 { //cannot sprint
+		inputs[5] = false
+		stamina = 0
+	} else { //trying to sprint and can sprint
+		stamina -= 1
+	}
+} else { // if you are not trying to sprint, recover stamina
+	stamina += 0.5 //recover at half the rate
+}
+
+show_debug_message("stamina = " + string(stamina))
+
 // ladder climbing 
 if (place_meeting(x, y, obj_ladder)) {
     if (gravD.y != 0) dir.y = 0; 
@@ -179,19 +194,21 @@ if (place_meeting(x, y, obj_ladder)) {
     
     // vertical movement
     if inputs[2] {
-        dir.y -= spd * (inputs[5] ? sprintMultiplier : 1)
+        dir.y -= 1.5 * spd
     }
 	if inputs[3] {
-        dir.y += spd * (inputs[5] ? sprintMultiplier : 1)
+        dir.y += 1.5 * spd
     }
 }
 
+//add the sprint multiplier
 var move = dir.clone()
 if gravD.x == 0 {
 	move.x *= spd * (inputs[5] ? sprintMultiplier : 1)
 }else if gravD.y == 0 {
 	move.y *= spd * (inputs[5] ? sprintMultiplier : 1)
 }
+
 
 //move player
 move_and_collide(move.x,move.y,collisionBlocks)
