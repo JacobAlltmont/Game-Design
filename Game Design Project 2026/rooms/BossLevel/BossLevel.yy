@@ -19,6 +19,7 @@
     {"name":"inst_5C12384F","path":"rooms/BossLevel/BossLevel.yy",},
     {"name":"inst_5742BF7","path":"rooms/BossLevel/BossLevel.yy",},
     {"name":"inst_36606677","path":"rooms/BossLevel/BossLevel.yy",},
+    {"name":"inst_2C4B1172","path":"rooms/BossLevel/BossLevel.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -36,6 +37,7 @@
         {"$GMRInstance":"v4","%Name":"inst_5C12384F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5C12384F","objectId":{"name":"obj_gem","path":"objects/obj_gem/obj_gem.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1216.0,"y":368.0,},
         {"$GMRInstance":"v4","%Name":"inst_5742BF7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5742BF7","objectId":{"name":"obj_enemy_green","path":"objects/obj_enemy_green/obj_enemy_green.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1120.0,"y":384.0,},
         {"$GMRInstance":"v4","%Name":"inst_36606677","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_36606677","objectId":{"name":"obj_enemy_blue","path":"objects/obj_enemy_blue/obj_enemy_blue.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1200.0,"y":144.0,},
+        {"$GMRInstance":"v4","%Name":"inst_2C4B1172","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2C4B1172","objectId":{"name":"obj_breakable_h","path":"objects/obj_breakable_h/obj_breakable_h.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1200.0,"y":416.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Accent2","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Accent2","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":48,"SerialiseWidth":86,"TileCompressedData":[
           -78,-2147483648,6,261,262,263,264,265,266,-80,-2147483648,6,234,235,236,237,238,239,-80,-2147483648,
@@ -144,8 +146,8 @@
           -47,-2147483648,1,20,-5,-2147483648,11,27,28,84,85,86,234,235,236,237,238,239,-5,-2147483648,6,261,262,
           263,264,265,266,-5,-2147483648,6,261,262,263,264,265,266,-47,-2147483648,1,20,-5,-2147483648,11,54,55,
           111,112,113,261,262,263,264,265,266,-5,-2147483648,6,234,235,236,237,238,239,-5,-2147483648,6,234,235,
-          236,237,238,239,-6,-2147483648,6,162,1,2,3,4,5,-6,-2147483648,30,20,21,22,23,24,25,20,21,22,23,24,25,
-          20,21,22,23,24,25,20,21,22,23,24,25,20,21,22,23,24,20,-5,-2147483648,11,81,82,30,31,32,234,235,236,237,
+          236,237,238,239,-6,-2147483648,6,162,1,2,3,4,5,-6,-2147483648,26,20,21,22,23,24,25,20,21,22,23,24,25,
+          20,21,22,23,24,25,20,21,22,23,24,25,20,21,-3,0,1,20,-5,-2147483648,11,81,82,30,31,32,234,235,236,237,
           238,239,-5,-2147483648,6,261,262,263,264,265,266,-5,-2147483648,6,261,262,263,264,265,266,-6,-2147483648,
           6,108,28,29,30,31,32,-41,-2147483648,11,108,109,57,58,59,261,262,263,264,265,266,-5,-2147483648,6,234,
           235,236,237,238,239,-5,-2147483648,6,234,235,236,237,238,239,-6,-2147483648,6,27,55,56,57,58,59,-41,
