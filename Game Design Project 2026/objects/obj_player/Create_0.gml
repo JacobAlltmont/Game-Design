@@ -4,6 +4,18 @@
 spawn = new Vector2(x,y)
 dir = new Vector2(0,0)
 spd = 1 // speed constant
+sprintMultiplier = 2
+useStamina = true
+staminaLimit = 5 * game_get_speed(gamespeed_fps)
+stamina = staminaLimit
+
+basehp = 10
+hp = basehp //placeholder
+
+scale = 1
+image_xscale = scale
+image_yscale = scale
+
 collisionBlocks = [abstract_block,layer_tilemap_get_id(layer_get_id("Ground"))]
 directions = [
 	new Vector2(-1,0),	//left
@@ -11,13 +23,9 @@ directions = [
 	new Vector2(0,-1),	//up
 	new Vector2(0,1)	//down
 ]
-inputs = pointer_null
+inputs = [false,false,false,false,false,false]
 
 isPlayer = true
-
-scale = 1
-image_xscale = scale
-image_yscale = scale
 
 //facing_right = true
 
@@ -31,7 +39,8 @@ if(instance_number(obj_player) > 1){
 take_damage = function(amount){
 	hp -= amount
 	if hp <= 0 {
-		reset(true)
+		sprite_index = spr_player_death
+		show_debug_message("player was killed")
 	}
 }
 
@@ -41,6 +50,7 @@ take_damage = function(amount){
 reset = function(died){
 	x = spawn.x
 	y = spawn.y
+	sprite_index = spr_player_idle
 	if died {
 		global.deaths++
 	}
@@ -50,8 +60,6 @@ reset = function(died){
 	ultimateAttackCooldown = 0
 }
 
-basehp = 100
-hp = basehp //placeholder
 
 hurtFlashTimer = 0
 
