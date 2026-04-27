@@ -1,7 +1,7 @@
 // @description creates damage function and sets gravity
 
 
-global.score = 1
+global.score = 20
 global.gems_collected = 0
 global.deaths = 0
 global.deaths_decrease = global.deaths / 2

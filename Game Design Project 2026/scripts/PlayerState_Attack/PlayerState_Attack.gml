@@ -61,6 +61,7 @@ function PlayerState_Attack(){
 				
 				if variable_instance_exists(hitID,"owner") {
 					enemy = hitID.owner
+					global.score += 20
 				}
 
 				if instance_exists(enemy) and enemy.object_index == obj_boss { // boss
