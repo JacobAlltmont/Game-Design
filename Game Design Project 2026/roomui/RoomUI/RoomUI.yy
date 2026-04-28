@@ -205,7 +205,18 @@
                             {"$GMRTextItem":"v3","%Name":"text_2ADC04D8","alignment":0,"charSpacing":0.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"fontId":{"name":"fnt_ui","path":"fonts/fnt_ui/fnt_ui.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_2ADC04D8","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"text":": Jump","wrap":false,"x":0.0,"y":0.0,},
                           ],"flexDirection":0,"height":{"unit":3,"value":44.0,},"justifyContent":1,"name":"Action","nodeColour":4287558216,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":198.0,},},
                       ],"flexDirection":2,"gapColumn":9.0,"height":{"unit":1,"value":48.0,},"justifyContent":1,"name":"Jump","nodeColour":4287645938,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":425.0,},},
-                  ],"flexDirection":0,"gapRow":16.0,"height":{"unit":3,"value":48.0,},"justifyContent":1,"name":"JumpAndAttackButtons","nodeColour":4282970718,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":48.0,},},
+                    {"$GMRFlexPanel":"","%Name":"Sprint","alignItems":2,"children":[
+                        {"$GMRFlexPanel":"","%Name":"Button","alignItems":2,"children":[
+                            {"$GMRFlexPanel":"","%Name":"Text","alignItems":2,"children":[
+                                {"$GMRTextItem":"v3","%Name":"text_35BB8EFA","alignment":1,"charSpacing":0.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"fontId":{"name":"fnt_ui","path":"fonts/fnt_ui/fnt_ui.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_35BB8EFA","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"text":"Shift","wrap":false,"x":70.0,"y":3.0,},
+                              ],"flexDirection":0,"height":{"unit":1,"value":44.0,},"justifyContent":1,"name":"Text","nodeColour":4294075976,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":198.0,},},
+                            {"$GMRSpriteGraphic":"v1","%Name":"graphic_3F72187E","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_3F72187E","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_ui_back","path":"sprites/spr_ui_back/spr_ui_back.yy",},"x":0.0,"y":0.0,},
+                          ],"flexDirection":0,"height":{"unit":1,"value":48.0,},"justifyContent":1,"name":"Button","nodeColour":4282932466,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":125.0,},},
+                        {"$GMRFlexPanel":"","%Name":"Action","alignItems":2,"children":[
+                            {"$GMRTextItem":"v3","%Name":"text_7E462B4B","alignment":0,"charSpacing":0.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"fontId":{"name":"fnt_ui","path":"fonts/fnt_ui/fnt_ui.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_7E462B4B","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"text":": Sprint","wrap":false,"x":0.0,"y":0.0,},
+                          ],"flexDirection":0,"height":{"unit":3,"value":44.0,},"justifyContent":1,"name":"Action","nodeColour":4287558216,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":198.0,},},
+                      ],"flexDirection":2,"gapColumn":9.0,"height":{"unit":1,"value":48.0,},"justifyContent":1,"name":"Sprint","nodeColour":4287645938,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":425.0,},},
+                  ],"flexDirection":0,"gapRow":9.0,"height":{"unit":3,"value":48.0,},"justifyContent":1,"name":"JumpAndAttackButtons","nodeColour":4282970718,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":48.0,},},
               ],"flexDirection":2,"gapColumn":26.0,"height":{"unit":1,"value":250.0,},"justifyContent":1,"name":"ControlsPanel","nodeColour":4289939698,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":850.0,},},
             {"$GMRFlexPanel":"","%Name":"BackButton","alignItems":2,"children":[
                 {"$GMRFlexPanel":"","%Name":"Icon","alignItems":2,"children":[
@@ -327,5 +338,5 @@
   "resourceType":"GMRoomUI",
   "resourceVersion":"2.0",
   "viewspaceChildren":[],
-  "visible":false,
+  "visible":true,
 }
