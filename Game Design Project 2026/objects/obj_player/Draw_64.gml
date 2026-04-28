@@ -10,6 +10,6 @@ draw_text(16, 45, "Ultimate Cooldown: " + string(ultimateAttackCooldown))
 draw_text(16, 74, "HP: " + string(hp))
 
 draw_set_halign(fa_right)
-draw_text(display_get_gui_width() - 16, 16, "Score: " + string(global.score))
+draw_text(display_get_gui_width() - 16, 16, "Score: " + string(max(0,global.score)))
 
 draw_set_halign(fa_left)

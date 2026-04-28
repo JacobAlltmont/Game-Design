@@ -1,5 +1,9 @@
 /// @description for shooting and damaging the player
 
+if !instance_exists(obj_player) {
+	return
+}
+
 var p = instance_nearest(x, y, obj_player);
 
 

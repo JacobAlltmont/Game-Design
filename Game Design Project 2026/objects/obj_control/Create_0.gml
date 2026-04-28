@@ -1,25 +1,23 @@
 // @description creates damage function and sets gravity
 
-
-global.score = 20
-global.gems_collected = 0
-global.deaths = 0
-global.deaths_decrease = global.deaths / 2
-global.boss_death = false
-global.final_score = 0
-global.gem_multiplier = global.gems_collected - global.deaths_decrease
+	if !variable_global_exists("score"){global.score = 0}
+	if !variable_global_exists("gems_collected"){global.gems_collected = 0}
+	if !variable_global_exists("deaths"){global.deaths = 0}
+	if !variable_global_exists("boss_death"){global.boss_death = false}
+	if !variable_global_exists("final_score"){global.final_score = 0}
+	//global.gem_multiplier = 
 
 
-function calculate_in_game_score(){
-	if (global.score <= 0){
-		global.score = 0
-	}
-	
+calculate_in_game_score = function () {
+	return max(0,global.score)
 }
 
-function calculate_score(){
+calculate_score = function (){
 	if (global.boss_death == true) {
-		global.final_score = global.score * global.gem_multiplier
+		global.final_score = global.score * max(0.5,(global.gems_collected - global.deaths / 2))
+		return global.final_score
+	}else{
+		return 0
 	}
 }
 
