@@ -1,5 +1,9 @@
 
-if (attackCooldown > 0) attackCooldown--
+if (windDown > 0) {
+	windDown --
+} else if (attackCooldown > 0) {
+	attackCooldown--
+}
 
 switch (state) {
 	case BOSSSTATE.IDLE: BossState_Idle() break

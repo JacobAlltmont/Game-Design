@@ -2,38 +2,40 @@ function BossState_Attack(){
 
 	var _attackSprite = spr_boss_attack1
 	var _attackMask = spr_boss_attack1_HITBOX
-	var _damage = 1
-	var _cooldown = 30
+	var _damage = 2
+	var _winddown = 1.5 * game_get_speed(gamespeed_fps)
 	
 	switch (attackType) {
 		case BOSSATTACK.ATTACK1:
-			_attackSprite = spr_boss_attack1
-			_attackMask = spr_boss_attack1_HITBOX
-			_damage = 1
-			_cooldown = 30
+			//_attackSprite = spr_boss_attack1
+			//_attackMask = spr_boss_attack1_HITBOX
+			//_damage = 1
+			//_winddown = 1 * game_get_speed(gamespeed_fps)
 			break
 			
 		case BOSSATTACK.ATTACK2:
 			_attackSprite = spr_boss_attack2
 			_attackMask = spr_boss_attack2_HITBOX
-			_damage = 1
-			_cooldown = 35
+			_damage = 2
+			_winddown = 2 * game_get_speed(gamespeed_fps)
 			break
 			
 		case BOSSATTACK.ATTACK3:
 			_attackSprite = spr_boss_attack3
 			_attackMask = spr_boss_attack3_HITBOX
-			_damage = 2
-			_cooldown = 50
+			_damage = 3
+			_winddown = 3 * game_get_speed(gamespeed_fps)
 			break
 			
 		case BOSSATTACK.ATTACK4:
 			_attackSprite = spr_boss_attack4
 			_attackMask = spr_boss_attack4_HITBOX
-			_damage = 4
-			_cooldown = 75
+			_damage = 5
+			_winddown = 4 * game_get_speed(gamespeed_fps)
 			break
 	}
+	
+	var _cooldown = 0.75 * _winddown
 	
 	hsp = 0
 	
@@ -50,7 +52,7 @@ function BossState_Attack(){
 	var hitByAttackNow = ds_list_create()
 	var hits = instance_place_list(x, y, obj_player_hurtbox, hitByAttackNow, false)
 	
-if (hits > 0) {
+	if (hits > 0) {
 		
 		for (var i = 0; i < hits; i++) {
 			
@@ -66,11 +68,8 @@ if (hits > 0) {
 					
 					}
 				}
-				
-			}
-				
+			}	
 		}
-		
 	}
 	
 	ds_list_destroy(hitByAttackNow)
@@ -80,6 +79,7 @@ if (hits > 0) {
 	
 		sprite_index = spr_boss_idle
 		state = BOSSSTATE.IDLE
+		windDown = _winddown
 		attackCooldown = _cooldown
 	
 	}

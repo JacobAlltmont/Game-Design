@@ -1,13 +1,14 @@
 
 hsp = 0
 vsp = 0
-spd = 2
+spd = 1
 grv = 0.5
 
 hp = 40
 
 hurtFlashTimer = 0
 attackCooldown = 45
+windDown = 0
 hurtbox = noone
 
 collisionBlocks = [abstract_block, layer_tilemap_get_id(layer_get_id("Ground"))]
