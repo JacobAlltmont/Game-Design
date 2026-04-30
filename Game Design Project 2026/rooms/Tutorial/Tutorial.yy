@@ -167,7 +167,7 @@
           84,85,82,83,84,85,82,83,84,85,82,83,84,85,82,83,84,85,82,83,84,85,86,-34,-2147483648,17,108,109,110,
           111,112,63,1,2,3,4,1,2,3,4,1,2,64,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tTileSet","path":"tilesets/tTileSet/tTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMRTileLayer":"","%Name":"TileBackground","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"TileBackground","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":48,"SerialiseWidth":86,"TileSerialiseData":[
+    {"$GMRTileLayer":"","%Name":"TileBackground","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"TileBackground","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":48,"SerialiseWidth":86,"TileSerialiseData":[
           222,223,224,225,226,227,222,223,224,225,226,227,18,19,224,225,226,227,222,223,224,99,100,227,222,223,
           224,225,226,227,99,100,224,225,226,227,222,223,224,18,19,227,222,223,224,225,226,227,18,19,224,225,226,
           227,222,223,224,18,19,227,222,223,224,225,226,227,99,100,224,225,226,227,222,223,224,72,73,227,222,223,

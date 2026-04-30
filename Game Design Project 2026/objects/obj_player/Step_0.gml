@@ -54,13 +54,13 @@ getInput = function(v){
 	} else if (keyPowerSwing && powerSwingCooldown <= 0) {
 	
 		attackType = PLAYERATTACK.POWER
-		powerSwingCooldown = 300
+		powerSwingCooldown = powerSwingCooldownMax
 		state = PLAYERSTATE.ATTACK
 	
 	} else if (keyUltimateAttack && ultimateAttackCooldown <= 0) {
 	
 		attackType = PLAYERATTACK.ULTIMATE
-		ultimateAttackCooldown = 1000
+		ultimateAttackCooldown = ultimateAttackCooldownMax
 		state = PLAYERSTATE.ATTACK
 	
 	}
