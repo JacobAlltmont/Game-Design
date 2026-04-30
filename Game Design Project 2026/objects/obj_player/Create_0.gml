@@ -63,6 +63,9 @@ reset = function(died){
 
 hurtFlashTimer = 0
 
+powerSwingCooldownMax = 300
+ultimateAttackCooldownMax = 1000
+
 powerSwingCooldown = 0
 ultimateAttackCooldown = 0
 

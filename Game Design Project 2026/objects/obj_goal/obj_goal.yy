@@ -34,5 +34,5 @@
     "path":"sprites/sflag/sflag.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
