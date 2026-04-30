@@ -7,7 +7,7 @@ function PlayerHit(){
 	
 	if (hp <= 0) {
 	
-		instance_destroy()
+		take_damage(argument0)
 	
 	}
 

@@ -64,7 +64,8 @@ function BossState_Attack(){
 				if (instance_exists(hitID.owner)) {
 					with (hitID.owner) {
 					
-						PlayerHit(_damage)
+						//PlayerHit(_damage)
+						take_damage(_damage)
 					
 					}
 				}

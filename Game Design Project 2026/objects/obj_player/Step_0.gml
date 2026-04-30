@@ -2,7 +2,7 @@
 
 //if the death animation is playing, do nothing and let it run
 if sprite_index == spr_player_death {
-	show_debug_message("player is dead")
+	//show_debug_message("player is dead")
 	if floor(image_index) = 20 {
 		reset(true)
 	}
